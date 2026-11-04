@@ -1,0 +1,67 @@
+import { test, expect } from '@playwright/test'
+
+test.use({ viewport: { width: 1440, height: 1000 } })
+
+test('Preferência reduzida permite ativação explícita, persistência e retorno seguro', async ({ page }) => {
+  const errors: string[] = []
+  page.on('pageerror', error => errors.push(error.message))
+  await page.goto('/#inicio')
+  await expect(page.getByRole('button', { name: 'Ativar animações', exact: true })).toBeVisible()
+  await expect(page.locator('.mission-word').last()).toHaveCSS('opacity', '1')
+  await page.getByRole('button', { name: 'Ativar animações', exact: true }).click()
+  await expect(page.locator('html')).toHaveClass(/motion-enabled/)
+  await expect(page.locator('html')).toHaveClass(/lenis/)
+  await expect(page.locator('.pin-spacer')).toHaveCount(1)
+  await expect(page.locator('.mission-word').last()).toHaveCSS('opacity', '0.2')
+  await expect(page.getByRole('button', { name: 'Reduzir animações', exact: true })).toBeVisible()
+  await page.reload()
+  await expect(page.locator('html')).toHaveClass(/motion-enabled/)
+  await expect(page.locator('.pin-spacer')).toHaveCount(1)
+  await page.mouse.wheel(0, 400)
+  await expect.poll(() => page.evaluate(() => scrollY)).toBeGreaterThan(350)
+  await page.getByRole('button', { name: 'Reduzir animações', exact: true }).click()
+  await expect(page.locator('html')).not.toHaveClass(/motion-enabled|lenis/)
+  await expect(page.locator('.pin-spacer')).toHaveCount(0)
+  await expect(page.locator('.mission-word').last()).toHaveCSS('opacity', '1')
+  await expect(page.locator('.value-label').last()).toHaveCSS('opacity', '1')
+  expect(await page.evaluate(() => scrollY)).toBeGreaterThan(100)
+  await page.reload()
+  await expect(page.getByRole('button', { name: 'Ativar animações', exact: true })).toBeVisible()
+  await page.getByRole('button', { name: 'Usar preferência de movimento do sistema' }).click()
+  await expect(page.locator('html')).not.toHaveClass(/motion-enabled|lenis/)
+  await expect(page.getByRole('button', { name: 'Usar preferência de movimento do sistema' })).toHaveCount(0)
+  expect(errors).toEqual([])
+})
+
+test('Controle também permite reduzir movimentos quando o sistema os habilita', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'no-preference' })
+  await page.goto('/#inicio')
+  await expect(page.locator('html')).toHaveClass(/motion-enabled/)
+  await page.getByRole('button', { name: 'Reduzir animações', exact: true }).click()
+  await expect(page.locator('html')).not.toHaveClass(/motion-enabled|lenis/)
+  await page.reload()
+  await expect(page.locator('html')).not.toHaveClass(/motion-enabled|lenis/)
+  await page.getByRole('button', { name: 'Usar preferência de movimento do sistema' }).click()
+  await expect(page.locator('html')).toHaveClass(/motion-enabled/)
+})
+
+test.describe('Preferência real da máquina, sem emulação', () => {
+  test.use({ reducedMotion: null })
+  test('URL informada oferece ativação quando o sistema reduz movimentos', async ({ page }) => {
+    await page.goto('/#inicio')
+    const reduced = await page.evaluate(() => matchMedia('(prefers-reduced-motion: reduce)').matches)
+    if (reduced) {
+      await expect(page.locator('html')).not.toHaveClass(/motion-enabled/)
+      await page.getByRole('button', { name: 'Ativar animações', exact: true }).click()
+    }
+    await expect(page.locator('html')).toHaveClass(/motion-enabled/)
+    await expect(page.locator('html')).toHaveClass(/lenis/)
+    await page.waitForTimeout(2200)
+    await page.screenshot({ path: 'docs/screenshots/motion/controle-ativado.png' })
+    await page.locator('.mission').scrollIntoViewIfNeeded()
+    await page.mouse.wheel(0, 300)
+    await page.waitForTimeout(1000)
+    const opacities = await page.locator('.mission-word').evaluateAll(elements => elements.map(element => Number(getComputedStyle(element).opacity)))
+    expect(opacities.some(opacity => opacity > 0.2)).toBe(true)
+  })
+})
