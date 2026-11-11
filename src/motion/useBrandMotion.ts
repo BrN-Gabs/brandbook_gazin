@@ -1,9 +1,10 @@
 import { useEffect, useRef } from 'react'
 import type { MotionPreference } from './useMotionPreference'
 
-export function useBrandMotion(preference: MotionPreference) {
+export function useBrandMotion(preference: MotionPreference, enabled = true) {
   const initialized = useRef(false)
   useEffect(() => {
+    if (!enabled) return
     let disposed = false
     let cleanup: (() => void) | undefined
     // A failed motion chunk cannot prevent React from rendering the brandbook.
@@ -19,5 +20,5 @@ export function useBrandMotion(preference: MotionPreference) {
       }
     })
     return () => { disposed = true; cleanup?.() }
-  }, [preference])
+  }, [preference, enabled])
 }

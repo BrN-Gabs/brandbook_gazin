@@ -1,4 +1,5 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import { BrandbookPreloader } from './components/BrandbookPreloader'
 import { useBrandMotion } from './motion/useBrandMotion'
 import { useMotionPreference } from './motion/useMotionPreference'
 import { MotionControl } from './components/MotionControl'
@@ -14,13 +15,16 @@ import { brandContent } from './data/brandContent'
 
 export default function App() {
   const motion = useMotionPreference()
-  useBrandMotion(motion.preference)
+  const [opening, setOpening] = useState(() => !location.hash || location.hash === '#inicio')
+  useBrandMotion(motion.preference, !opening)
   useEffect(() => {
     document.title = brandContent.meta.title
     document.querySelector('meta[name="description"]')?.setAttribute('content', brandContent.meta.description)
   }, [])
 
   return <>
+    {opening && <BrandbookPreloader reduced={!motion.enabled} onComplete={() => setOpening(false)} />}
+    <div id="brandbook-page">
     <ScrollProgress />
     <IntroPointer />
     <a className="skip-link" href="#main-content">{brandContent.accessibility.skipToContent}</a>
@@ -33,5 +37,6 @@ export default function App() {
     </main>
     <Footer />
     <MotionControl preference={motion.preference} enabled={motion.enabled} systemReduced={motion.systemReduced} onChange={motion.choose} />
+    </div>
   </>
 }

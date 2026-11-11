@@ -1,4 +1,5 @@
 import { createIntroHoverEffect, introHoverTarget } from './IntroHoverEffect'
+import { createBrandbookDistortion } from './BrandbookDistortion'
 
 type Ripple = { x: number; y: number; born: number; kind: 'pointer' | 'click' }
 type QuietArea = { left: number; top: number; right: number; bottom: number; strength: number }
@@ -14,8 +15,8 @@ type Surface = {
 }
 
 const fieldConfig = {
-  spacing: 24,
-  mobileSpacing: 32,
+  spacing: 18,
+  mobileSpacing: 24,
   idleSize: 1.5,
   activeSize: 4.5,
   idleOpacity: 0.14,
@@ -43,6 +44,7 @@ export function createIntroPointerField(interactive: boolean) {
   })
   if (!surfaces.length || !pointer) return () => {}
   const hover = interactive ? createIntroHoverEffect() : undefined
+  const distortion = interactive ? createBrandbookDistortion() : undefined
   let hoverTarget: HTMLElement | null = null
 
   let frame = 0
@@ -247,6 +249,7 @@ export function createIntroPointerField(interactive: boolean) {
     ripples = []
     hoverTarget = null
     hover?.reset()
+    distortion?.reset()
     pointer!.style.opacity = '0'
     cancelAnimationFrame(frame)
     frame = 0
@@ -276,6 +279,7 @@ export function createIntroPointerField(interactive: boolean) {
     cancelAnimationFrame(frame)
     resize.disconnect()
     hover?.destroy()
+    distortion?.destroy()
     surfaces.forEach(({ section, canvas, context }) => {
       section.removeEventListener('pointermove', onMove)
       section.removeEventListener('pointerleave', onLeave)

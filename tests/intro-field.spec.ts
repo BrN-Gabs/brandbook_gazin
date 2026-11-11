@@ -6,7 +6,9 @@ test('Clique esquerdo propaga a onda nas quatro direções e a malha volta ao re
   await page.goto('/#inicio')
   await expect(page.locator('html')).toHaveClass(/motion-enabled/)
   await page.waitForTimeout(2300)
-  const origin = await page.locator('.introduction').evaluate(element => ({ x: 180, y: element.getBoundingClientRect().top + 70 }))
+  // Sample the open right margin: the larger editorial title intentionally
+  // attenuates the canvas under its text and must not be used as a wave probe.
+  const origin = await page.locator('.introduction').evaluate(element => ({ x: innerWidth - 180, y: element.getBoundingClientRect().top + 24 }))
   await page.mouse.move(origin.x, origin.y)
   await page.waitForTimeout(1800)
   const sample = () => page.locator('.intro-field').evaluateAll((elements, center) => {
@@ -38,7 +40,7 @@ test('Clique esquerdo propaga a onda nas quatro direções e a malha volta ao re
   await expect.poll(async () => Math.max(...differences(await sample())), { timeout: 4500 }).toBeLessThan(0.5)
 })
 
-test('Hover azul acompanha letras e logo e restaura os elementos ao sair', async ({ page }) => {
+test('Distorção do título e hover azul da logo restauram os elementos ao sair', async ({ page }) => {
   const errors: string[] = []
   page.on('pageerror', error => errors.push(error.message))
   await page.goto('/#inicio')
@@ -49,12 +51,13 @@ test('Hover azul acompanha letras e logo e restaura os elementos ao sair', async
   const logo = page.locator('.hero-logo')
   const logoSource = await logo.getAttribute('src')
 
-  await page.locator('.intro-letter').nth(4).hover()
-  await expect(effect).toHaveCSS('opacity', '1')
-  await expect(title).toHaveCSS('filter', /url\(.+intro-hover-/)
-  const firstPosition = await effect.evaluate(el => getComputedStyle(el).transform)
-  await page.locator('.intro-letter').nth(7).hover()
-  await expect.poll(() => effect.evaluate(el => getComputedStyle(el).transform)).not.toBe(firstPosition)
+  await page.locator('.intro-word').first().hover()
+  await expect(effect).toHaveCSS('opacity', '0')
+  await expect(title).toHaveCSS('filter', /url\(.+brandbook-distortion-/)
+  const map = page.locator('.brandbook-distortion-definitions feImage')
+  const firstTexture = await map.getAttribute('href')
+  await page.locator('.intro-word').last().hover()
+  await expect.poll(() => map.getAttribute('href')).not.toBe(firstTexture)
 
   await logo.hover()
   await expect(logo).toHaveCSS('filter', /url\(.+intro-hover-/)

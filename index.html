@@ -4,6 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0B109F" />
+    <link rel="preload" as="image" href="./assets/logo-gazin.png" fetchpriority="high" />
+    <style>
+      html[data-brandbook-boot]::before { content: ''; position: fixed; inset: 0; z-index: 999; background: #4068fd; }
+    </style>
+    <script>
+      if (!location.hash || location.hash === '#inicio') {
+        document.documentElement.setAttribute('data-brandbook-boot', '');
+        // Never leave the initial color veil stuck if the application bundle fails.
+        setTimeout(() => document.documentElement.removeAttribute('data-brandbook-boot'), 8000);
+      }
+    </script>
     <link rel="icon" type="image/png" href="/assets/logo-gazin.png" />
     <meta name="description" content="Brandbook Gazin. Nossa essência, missão, visão e os pilares que orientam um jeito de fazer, conectar e transformar." />
     <title>Brandbook Gazin — Guia da Marca</title>

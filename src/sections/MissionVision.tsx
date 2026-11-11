@@ -1,5 +1,6 @@
 import { brandContent as content, type PurposeStatement } from '../data/brandContent'
 import { Fragment } from 'react'
+import { PurposePhotoFrame } from '../components/PurposePhotoFrame'
 
 function PurposeContent({ statement, revealWords = false }: { statement: PurposeStatement; revealWords?: boolean }) {
   return (
@@ -20,15 +21,17 @@ export function MissionVision() {
   return (
     <section id="missao-visao" aria-label={content.purpose.title}>
       <div className="mission section-space">
-        <div className="page-container">
-          <PurposeContent statement={content.purpose.mission} revealWords />
+        <div className="page-container purpose-layout">
+          <div className="purpose-copy"><PurposeContent statement={content.purpose.mission} revealWords /></div>
+          <PurposePhotoFrame />
         </div>
       </div>
       <div className="vision blue-section section-space">
         <div className="vision-panel" aria-hidden="true" />
         <div className="vision-arc" aria-hidden="true" />
-        <div className="page-container relative">
-          <PurposeContent statement={content.purpose.vision} />
+        <div className="page-container relative purpose-layout">
+          <div className="purpose-copy"><PurposeContent statement={content.purpose.vision} /></div>
+          <PurposePhotoFrame />
         </div>
       </div>
     </section>

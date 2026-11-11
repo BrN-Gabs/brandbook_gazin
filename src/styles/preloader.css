@@ -1,0 +1,27 @@
+/* Colors sampled from the supplied JPEGs; the official logo remains untouched. */
+.brandbook-preloader { --opening-blue: #4068fd; --opening-ink: #0b109f; position: fixed; inset: 0; z-index: 200; overflow: hidden; color: white; outline: none; isolation: isolate; }
+.preloader-backdrop { position: absolute; inset: 0; background: var(--opening-blue); z-index: -1; }
+.preloader-center { position: absolute; left: 50%; top: 50%; width: 37.2vw; aspect-ratio: 2974 / 835; transform: translate(-50%, -50%); }
+.loading-outline { position: absolute; inset: -1.5% 0; width: 100%; height: 103%; overflow: visible; }
+.loading-outline path { stroke-width: 4.5; stroke-linecap: round; stroke-linejoin: round; }
+.loading-track { stroke: white; }
+.loading-segments { stroke: var(--opening-ink); stroke-dashoffset: -25; }
+.loading-percentage { position: absolute; inset: 0; display: grid; place-items: center; font: 200 clamp(30px, 4.25vw, 96px)/1 'Inter Variable', sans-serif; font-variant-numeric: tabular-nums; letter-spacing: -.065em; }
+.preloader-logo { position: absolute; inset: 0; display: block; width: 100%; height: auto; opacity: 0; transform-origin: center; will-change: transform, opacity; }
+.preloader-word { position: absolute; font: 900 clamp(64px, 13.2vw, 380px)/.82 'Inter Variable', sans-serif; letter-spacing: .005em; will-change: transform; }
+.preloader-brand { left: 5.5%; top: 8.7%; transform: translateX(-120%); }
+.preloader-book { right: 8.8%; bottom: 9.1%; transform: translateX(135%); }
+.preloader-skip { position: absolute; left: 50%; bottom: max(20px, env(safe-area-inset-bottom)); transform: translate(-50%, 200%); padding: 12px 20px; border: 1px solid white; border-radius: 3px; color: white; background: var(--opening-ink); font: 500 14px var(--font-sans); }
+.preloader-skip:focus-visible { transform: translate(-50%, 0); }
+@media (max-width: 767px) {
+  .preloader-center { width: 74vw; }
+  .preloader-word { font-size: clamp(64px, 22vw, 168px); }
+  .preloader-brand { left: 6%; top: max(12%, env(safe-area-inset-top)); }
+  .preloader-book { right: 6%; bottom: max(12%, env(safe-area-inset-bottom)); }
+  .loading-percentage { font-size: clamp(30px, 8.5vw, 65px); }
+}
+@media (max-height: 480px) and (min-width: 600px) {
+  .preloader-word { font-size: 18vh; }
+  .preloader-center { width: min(37.2vw, 80vh); }
+  .loading-percentage { font-size: 9vh; }
+}

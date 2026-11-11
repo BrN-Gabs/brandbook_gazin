@@ -1,7 +1,7 @@
 let nextFilterId = 0
 
 export function introHoverTarget(element: Element | null) {
-  return element?.closest<HTMLElement>('.hero-title-motion, .hero-logo, .intro-letter, .introduction h3, .introduction .body-copy')?.closest<HTMLElement>('.hero-title-motion, .hero-logo, #introduction-title, .introduction h3, .introduction .body-copy') ?? null
+  return element?.closest<HTMLElement>('.hero-logo, .introduction h2, .introduction .body-copy') ?? null
 }
 
 // One local filter and one halftone overlay follow the existing pointer ticker.

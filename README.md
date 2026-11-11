@@ -2,6 +2,8 @@
 
 Brandbook institucional em React, Vite, TypeScript e Tailwind CSS, com GSAP/ScrollTrigger e Lenis para a narrativa de movimento. Sem backend. Abertura e introdução formam um bloco visual, seguido de missão, visão, valores e pilares.
 
+A entrada inclui loading SVG sincronizado com os recursos essenciais, composição “brand / Gazin / book” e transição para a introdução editorial. Consulte [Abertura cinematográfica](docs/PRELOADER.md) para arquitetura, timings, acessibilidade e validação. Não há novas dependências.
+
 ## Executar
 
 Requer Node.js 22.12 ou superior e npm.

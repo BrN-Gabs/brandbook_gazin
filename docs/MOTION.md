@@ -4,7 +4,7 @@ A implementação preserva o conteúdo em `src/data/brandContent.ts`, a logo PNG
 
 ## Narrativa
 
-- **Abertura e introdução:** entrada do título, logo com escala 0.94 → 1, letras escalonadas, desenho das divisórias e títulos antes dos parágrafos. Containers separados permitem parallax sem disputar as transformações da entrada.
+- **Abertura e introdução:** loading SVG ligado aos recursos essenciais, composição tipográfica e deslocamento da logo até a introdução, com título e colunas escalonados. A sequência é gerenciada por `BrandbookPreloader`; o motor de scroll inicia depois dela. Consulte [Abertura cinematográfica](PRELOADER.md).
 - **Missão:** palavras evoluem de opacidade 0.2 até 1 com scrub reversível. Pin de até 620 px somente com mouse, largura mínima de 1100 px, altura mínima de 900 px e conteúdo que cabe inteiro na viewport. Caso contrário, a leitura progride no fluxo normal.
 - **Visão:** máscaras nas linhas editoriais no desktop; entrada do bloco no mobile para preservar suas quebras naturais. Painel azul cresce atrás do conteúdo; círculos acompanham o scroll com deslocamento, rotação e escala discretos. Não há loop permanente.
 - **Valores:** entradas por item e destaque progressivo na região de leitura; hover sutil em texto e marcador. Itens estáticos não são inseridos artificialmente na ordem de tabulação.
@@ -18,13 +18,15 @@ O clique esquerdo na abertura ou introdução emite uma onda radial forte em azu
 
 O hover sobre a logo e os textos da abertura/introdução acrescenta um realce azul-ciano (`--color-motion-light`), com brilho suave e pontos discretos ao redor do cursor. O filtro SVG colore os traços originais sem duplicar, deslocar ou desfocar as letras, preservando a leitura. `IntroHoverEffect.ts` acompanha o mesmo ticker do campo de fundo, restaura o elemento ao sair e remove seus recursos ao desativar o movimento. Touch e movimento reduzido não recebem esse efeito.
 
+O título grande “brandbook” tem uma interação própria em `BrandbookDistortion.ts`, inspirada no título inicial de https://airbagstudio.it/. Uma malha fixa de células quadradas recebe impulsos na direção e proporção do deslocamento do mouse. Cada célula relaxa independentemente, deixando um breve rastro de recortes que desaparece mesmo com o ponteiro parado sobre o título. O mapa SVG alimenta `feDisplacementMap` sobre o texto original, sem alterar fonte, cor, layout ou semântica. A dimensão das células acompanha a tipografia; a amplitude é limitada e o decaimento usa o tempo entre frames. O RAF encerra quando as células repousam. A distorção substitui o realce ciano apenas nesse título e mantém o cursor de seta. Scroll, resize, perda de foco, mudança de preferência e desmontagem restauram o filtro original e descartam os recursos. Touch, movimento reduzido e o modo de capacidade limitada permanecem estáticos.
+
 | Arquivo em `src/motion/` | Responsabilidade |
 | --- | --- |
 | `useBrandMotion.ts` | Carregamento separado, espera pelas fontes e descarte seguro no React StrictMode. |
 | `createBrandMotion.ts` | Ciclo de vida via `gsap.matchMedia`, coordenação em ordem de leitura e indicador. |
 | `MotionConfig.ts` | Easing, distâncias, durações, scrub, breakpoints e helper de revelação. |
 | `ScrollManager.ts` | Uma instância de Lenis ligada ao ticker GSAP; atualização de ScrollTrigger; âncoras, foco e limpeza. |
-| `IntroAnimations.ts` | Abertura, tipografia, colunas e saída. |
+| `IntroAnimations.ts` | Saída da introdução; a entrada pertence ao preloader. |
 | `IntroPointerField.ts` | Malha de X, propagação de ondas e acompanhamento do mouse; parâmetros em `fieldConfig`. |
 | `MissionAnimations.ts` | Revelação por palavra e pin condicional. |
 | `VisionAnimations.ts` | Máscaras, painel e círculos. |
