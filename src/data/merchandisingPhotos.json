@@ -1,0 +1,62 @@
+{
+  "fachada-noite": {
+    "width": 1600,
+    "height": 757,
+    "source": 12
+  },
+  "fachada-dia": {
+    "width": 1400,
+    "height": 632,
+    "source": 12
+  },
+  "layout-loja": {
+    "width": 1132,
+    "height": 1600,
+    "source": 10
+  },
+  "caixa-comunicacao": {
+    "width": 1600,
+    "height": 746,
+    "source": 64
+  },
+  "cartaz-frente-loja": {
+    "width": 1150,
+    "height": 1600,
+    "source": 84
+  },
+  "cartaz-ofertas": {
+    "width": 900,
+    "height": 1260,
+    "source": 86
+  },
+  "cartazes-entrada": {
+    "width": 1329,
+    "height": 907,
+    "source": 13
+  },
+  "calcada-inadequada": {
+    "width": 1253,
+    "height": 810,
+    "source": 14
+  },
+  "calcada-adequada": {
+    "width": 1534,
+    "height": 1004,
+    "source": 14
+  },
+  "uniforme": {
+    "width": 427,
+    "height": 320,
+    "source": 96
+  },
+  "placas-sinalizacao": {
+    "width": 1600,
+    "height": 279,
+    "source": 65
+  },
+  "ambientacao-cozinha": {
+    "width": 1470,
+    "height": 1210,
+    "source": 46
+  }
+}

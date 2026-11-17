@@ -1,0 +1,317 @@
+{
+  "teo": [
+    {
+      "id": "teo-joinha",
+      "name": "Joinha",
+      "file": "teo-joinha.png",
+      "path": "assets/brandbook/personagens/teo/teo-joinha.png",
+      "format": "PNG",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1265383,
+      "background": "transparente",
+      "preview": {
+        "path": "assets/brandbook/personagens/previas/teo-joinha.webp",
+        "width": 760,
+        "height": 760
+      }
+    },
+    {
+      "id": "teo-acenando",
+      "name": "Acenando",
+      "file": "teo-acenando.png",
+      "path": "assets/brandbook/personagens/teo/teo-acenando.png",
+      "format": "PNG",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 931487,
+      "background": "transparente",
+      "preview": {
+        "path": "assets/brandbook/personagens/previas/teo-acenando.webp",
+        "width": 760,
+        "height": 1013
+      }
+    },
+    {
+      "id": "teo-apontando",
+      "name": "Apontando",
+      "file": "teo-apontando.png",
+      "path": "assets/brandbook/personagens/teo/teo-apontando.png",
+      "format": "PNG",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 829863,
+      "background": "transparente",
+      "preview": {
+        "path": "assets/brandbook/personagens/previas/teo-apontando.webp",
+        "width": 760,
+        "height": 1013
+      }
+    },
+    {
+      "id": "teo-produto",
+      "name": "Apresentando um produto",
+      "file": "teo-produto.png",
+      "path": "assets/brandbook/personagens/teo/teo-produto.png",
+      "format": "PNG",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 801271,
+      "background": "transparente",
+      "preview": {
+        "path": "assets/brandbook/personagens/previas/teo-produto.webp",
+        "width": 760,
+        "height": 1013
+      }
+    },
+    {
+      "id": "teo-tablet",
+      "name": "Segurando um dispositivo",
+      "file": "teo-tablet.png",
+      "path": "assets/brandbook/personagens/teo/teo-tablet.png",
+      "format": "PNG",
+      "width": 1087,
+      "height": 1447,
+      "bytes": 770511,
+      "background": "transparente",
+      "preview": {
+        "path": "assets/brandbook/personagens/previas/teo-tablet.webp",
+        "width": 760,
+        "height": 1012
+      }
+    },
+    {
+      "id": "teo-ideia",
+      "name": "Atenção",
+      "file": "teo-ideia.png",
+      "path": "assets/brandbook/personagens/teo/teo-ideia.png",
+      "format": "PNG",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 954236,
+      "background": "transparente",
+      "preview": {
+        "path": "assets/brandbook/personagens/previas/teo-ideia.webp",
+        "width": 760,
+        "height": 1013
+      }
+    },
+    {
+      "id": "teo-orientando",
+      "name": "Orientando",
+      "file": "teo-orientando.png",
+      "path": "assets/brandbook/personagens/teo/teo-orientando.png",
+      "format": "PNG",
+      "width": 1087,
+      "height": 1447,
+      "bytes": 810832,
+      "background": "transparente",
+      "preview": {
+        "path": "assets/brandbook/personagens/previas/teo-orientando.webp",
+        "width": 760,
+        "height": 1012
+      }
+    },
+    {
+      "id": "teo-comemorando",
+      "name": "Comemorando",
+      "file": "teo-comemorando.png",
+      "path": "assets/brandbook/personagens/teo/teo-comemorando.png",
+      "format": "PNG",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 945310,
+      "background": "transparente",
+      "preview": {
+        "path": "assets/brandbook/personagens/previas/teo-comemorando.webp",
+        "width": 760,
+        "height": 1013
+      }
+    },
+    {
+      "id": "teo-confiante",
+      "name": "Joinha · corpo inteiro",
+      "file": "teo-confiante.png",
+      "path": "assets/brandbook/personagens/teo/teo-confiante.png",
+      "format": "PNG",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 871124,
+      "background": "transparente",
+      "preview": {
+        "path": "assets/brandbook/personagens/previas/teo-confiante.webp",
+        "width": 760,
+        "height": 1013
+      }
+    }
+  ],
+  "gia": [
+    {
+      "id": "gia-joinha",
+      "name": "Joinha",
+      "file": "gia-joinha.png",
+      "path": "assets/brandbook/personagens/gia/gia-joinha.png",
+      "format": "PNG",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 917460,
+      "background": "transparente",
+      "preview": {
+        "path": "assets/brandbook/personagens/previas/gia-joinha.webp",
+        "width": 760,
+        "height": 760
+      }
+    },
+    {
+      "id": "gia-tablet",
+      "name": "Com tablet",
+      "file": "gia-tablet.png",
+      "path": "assets/brandbook/personagens/gia/gia-tablet.png",
+      "format": "PNG",
+      "width": 1087,
+      "height": 1447,
+      "bytes": 870527,
+      "background": "transparente",
+      "preview": {
+        "path": "assets/brandbook/personagens/previas/gia-tablet.webp",
+        "width": 760,
+        "height": 1012
+      }
+    },
+    {
+      "id": "gia-ideia",
+      "name": "Ideia",
+      "file": "gia-ideia.png",
+      "path": "assets/brandbook/personagens/gia/gia-ideia.png",
+      "format": "PNG",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 763848,
+      "background": "transparente",
+      "preview": {
+        "path": "assets/brandbook/personagens/previas/gia-ideia.webp",
+        "width": 760,
+        "height": 1013
+      }
+    },
+    {
+      "id": "gia-acenando",
+      "name": "Acenando",
+      "file": "gia-acenando.png",
+      "path": "assets/brandbook/personagens/gia/gia-acenando.png",
+      "format": "PNG",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 769268,
+      "background": "transparente",
+      "preview": {
+        "path": "assets/brandbook/personagens/previas/gia-acenando.webp",
+        "width": 760,
+        "height": 1013
+      }
+    },
+    {
+      "id": "gia-apontando",
+      "name": "Apontando",
+      "file": "gia-apontando.png",
+      "path": "assets/brandbook/personagens/gia/gia-apontando.png",
+      "format": "PNG",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 888840,
+      "background": "transparente",
+      "preview": {
+        "path": "assets/brandbook/personagens/previas/gia-apontando.webp",
+        "width": 760,
+        "height": 1013
+      }
+    },
+    {
+      "id": "gia-apresentando",
+      "name": "Apresentando",
+      "file": "gia-apresentando.png",
+      "path": "assets/brandbook/personagens/gia/gia-apresentando.png",
+      "format": "PNG",
+      "width": 1087,
+      "height": 1447,
+      "bytes": 832105,
+      "background": "transparente",
+      "preview": {
+        "path": "assets/brandbook/personagens/previas/gia-apresentando.webp",
+        "width": 760,
+        "height": 1012
+      }
+    },
+    {
+      "id": "gia-explicando",
+      "name": "Explicando",
+      "file": "gia-explicando.png",
+      "path": "assets/brandbook/personagens/gia/gia-explicando.png",
+      "format": "PNG",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 839145,
+      "background": "transparente",
+      "preview": {
+        "path": "assets/brandbook/personagens/previas/gia-explicando.webp",
+        "width": 760,
+        "height": 1013
+      }
+    },
+    {
+      "id": "gia-atencao",
+      "name": "Atenção",
+      "file": "gia-atencao.png",
+      "path": "assets/brandbook/personagens/gia/gia-atencao.png",
+      "format": "PNG",
+      "width": 1087,
+      "height": 1447,
+      "bytes": 845934,
+      "background": "transparente",
+      "preview": {
+        "path": "assets/brandbook/personagens/previas/gia-atencao.webp",
+        "width": 760,
+        "height": 1012
+      }
+    },
+    {
+      "id": "gia-comemorando",
+      "name": "Comemorando",
+      "file": "gia-comemorando.png",
+      "path": "assets/brandbook/personagens/gia/gia-comemorando.png",
+      "format": "PNG",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 919903,
+      "background": "transparente",
+      "preview": {
+        "path": "assets/brandbook/personagens/previas/gia-comemorando.webp",
+        "width": 760,
+        "height": 1013
+      }
+    }
+  ],
+  "interface": {
+    "id": "gia-interface",
+    "name": "Interface da plataforma",
+    "file": "gia-interface-captura.png",
+    "path": "assets/brandbook/personagens/gia/gia-interface-captura.png",
+    "format": "PNG",
+    "width": 896,
+    "height": 536,
+    "bytes": 80293,
+    "background": "interface"
+  },
+  "zips": {
+    "teo": {
+      "path": "assets/brandbook/personagens/materiais-teo-gazin.zip",
+      "bytes": 7785477,
+      "files": 9
+    },
+    "gia": {
+      "path": "assets/brandbook/personagens/materiais-gia-gazin.zip",
+      "bytes": 7281456,
+      "files": 9
+    }
+  }
+}

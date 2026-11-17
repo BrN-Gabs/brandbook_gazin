@@ -1,0 +1,130 @@
+/* ═══ ÁRVORE DA JORNADA DE SUCESSO (Essência · encerramento) ════════════════════
+   Luz azul sobre marinho, no mesmo idioma do DNA. Desktop (≥ 1100 px): palco de tela cheia
+   com título, barra de regiões e painel sobrepostos (fixo durante a formação: .is-pinned).
+   Telas menores: título, palco, barra e painel em sequência. Só tokens Gazin. */
+
+.success-tree.blue-section {
+  position: relative;
+  color: var(--gazin-white);
+  background:
+    radial-gradient(ellipse 55% 45% at 50% 30%, rgb(var(--gazin-blue-bright-rgb) / .16), transparent 70%),
+    radial-gradient(ellipse 60% 30% at 50% 82%, rgb(var(--gazin-blue-rgb) / .55), transparent 72%),
+    linear-gradient(180deg, var(--gazin-navy-deep), var(--gazin-navy) 55%, var(--gazin-navy-deep));
+  scroll-margin-top: 0;
+}
+.tree-pin { position: relative; overflow: clip; padding-top: clamp(88px, 10vw, 120px); }
+
+/* Heading */
+.tree-head { position: relative; z-index: 3; display: grid; justify-items: start; gap: 12px; width: min(100% - var(--gutter) * 2, 560px); margin-inline: var(--gutter); transition: opacity .5s ease, translate .5s ease; }
+.tree-eyebrow { display: flex; align-items: center; gap: 10px; font-size: 10.5px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--gazin-blue-tint); }
+.tree-eyebrow span { width: 6px; height: 6px; border-radius: 50%; background: var(--gazin-blue-bright); box-shadow: 0 0 12px var(--glow-primary); }
+.tree-title { font: 800 clamp(38px, 4.3vw, 72px)/1 var(--font-display); letter-spacing: -.05em; color: var(--gazin-white); text-wrap: balance; }
+.tree-concept { font: 500 clamp(16px, 1.3vw, 20px)/1.4 var(--font-display); letter-spacing: -.01em; color: var(--gazin-blue-text); text-wrap: balance; }
+.tree-text { max-width: 400px; font-size: 14.5px; line-height: 1.7; color: var(--gazin-gray-light); }
+.tree-hint { display: inline-flex; align-items: center; gap: 10px; margin-top: 6px; font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--gazin-blue-tint); }
+.tree-hint svg { color: var(--gazin-blue-bright); }
+
+/* Stage */
+.tree-stage { position: relative; height: clamp(380px, 112vw, 74svh); margin-top: 8px; touch-action: pan-y; }
+.tree-atmosphere { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse 40% 34% at 50% 72%, rgb(var(--gazin-blue-bright-rgb) / .12), transparent 70%); }
+.tree-canvas { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
+.tree-fallback { position: absolute; inset: 4% 3%; width: 94%; height: 92%; color: var(--gazin-blue-tint); stroke: currentColor; stroke-width: .045; stroke-linecap: round; opacity: .55; transition: opacity .6s ease; }
+.tree-fallback .tree-fallback-trunk { stroke-width: .07; }
+.tree-fallback .tree-fallback-ground { stroke-dasharray: .05 .2; opacity: .5; }
+.tree-fallback circle { fill: var(--gazin-blue-bright); stroke: var(--gazin-white); stroke-width: .03; }
+.tree-fallback circle.accent-orange { fill: var(--gazin-orange); }
+.tree-fallback circle.accent-green { fill: var(--gazin-green); }
+.success-tree[data-status='ready'] .tree-fallback { opacity: 0; }
+.success-tree:not([data-status='ready']) .tree-labels { display: none; }
+
+/* Labels anchored to 3D points (transform set by the scene every frame) */
+.tree-labels { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.tree-label { position: absolute; top: 0; left: 0; display: flex; align-items: center; gap: 8px; translate: -9px -9px; opacity: 0; pointer-events: none; cursor: pointer; transition: opacity .35s ease; will-change: transform; }
+.tree-label[data-visible='true'] { opacity: 1; }
+/* Only the point (and the text once shown) is a target: hidden texts never cover neighbours. */
+.tree-label[data-visible='true'] .tree-label-dot, .tree-label[data-visible='true'][data-show='true'] .tree-label-text, .tree-label[data-visible='true']:hover .tree-label-text { pointer-events: auto; }
+.tree-label[data-state='dim'] { opacity: .4; }
+.tree-label[data-side='left'] { flex-direction: row-reverse; translate: calc(-100% + 9px) -9px; }
+.tree-label-dot { position: relative; flex: none; width: 18px; height: 18px; border-radius: 50%; }
+.tree-label-dot::after { content: ''; position: absolute; inset: 5px; border-radius: 50%; background: var(--gazin-white); box-shadow: 0 0 0 2px rgb(var(--gazin-blue-bright-rgb) / .55), 0 0 14px var(--gazin-blue-bright); transition: inset .25s ease, box-shadow .25s ease; }
+.tree-label.is-frutos .tree-label-dot::after { inset: 6px; opacity: .0; }
+.tree-label.is-tronco .tree-label-dot::after { inset: 6px; }
+.tree-label:hover .tree-label-dot::after, .tree-label[data-state='focus'] .tree-label-dot::after, .tree-label[data-state='selected'] .tree-label-dot::after { inset: 3px; box-shadow: 0 0 0 3px rgb(var(--gazin-blue-bright-rgb) / .6), 0 0 22px var(--gazin-blue-bright); }
+.tree-label.is-frutos:hover .tree-label-dot::after, .tree-label.is-frutos[data-state='focus'] .tree-label-dot::after { opacity: 0; }
+.tree-label-text { max-width: 220px; padding: 5px 11px; border: 1px solid rgb(var(--gazin-blue-tint-rgb) / .22); border-radius: 99px; background: rgb(var(--gazin-navy-rgb) / .62); backdrop-filter: blur(6px); font: 600 12px/1.25 var(--font-sans); letter-spacing: .01em; color: var(--gazin-white); white-space: nowrap; opacity: 0; scale: .92; transform-origin: left center; transition: opacity .3s ease, scale .3s ease, background .25s ease, border-color .25s ease; }
+.tree-label[data-side='left'] .tree-label-text { transform-origin: right center; }
+.tree-label[data-show='true'] .tree-label-text, .tree-label:hover .tree-label-text { opacity: 1; scale: 1; }
+.tree-label[data-state='focus'] .tree-label-text, .tree-label[data-state='selected'] .tree-label-text { border-color: rgb(var(--gazin-blue-bright-rgb) / .9); background: rgb(var(--gazin-blue-rgb) / .78); }
+/* Clicked element: larger name, grown from the side of its point (the dot stays in place). */
+.tree-label[data-state='selected'] { z-index: 2; }
+.tree-label[data-state='selected'] .tree-label-text { scale: 1.45; padding: 6px 13px; font-weight: 700; box-shadow: 0 10px 30px -10px rgb(var(--gazin-blue-bright-rgb) / .8); }
+.tree-label.is-frutos .tree-label-text { font-weight: 700; }
+.tree-label.is-frutos.accent-orange:is([data-state='focus'], [data-state='selected']) .tree-label-text { border-color: var(--gazin-orange); }
+.tree-label.is-frutos.accent-green:is([data-state='focus'], [data-state='selected']) .tree-label-text { border-color: var(--gazin-green); }
+
+.tree-region-label { position: absolute; top: 0; left: 0; translate: -50% -50%; padding: 8px 14px; border-radius: 99px; font: 700 11px var(--font-sans); letter-spacing: .26em; text-transform: uppercase; color: var(--gazin-blue-tint); background: rgb(var(--gazin-blue-bright-rgb) / .1); border: 1px solid rgb(var(--gazin-blue-tint-rgb) / .2); opacity: 0; pointer-events: none; cursor: pointer; transition: opacity .45s ease, background .25s ease, color .25s ease; }
+.tree-region-label[data-visible='true'] { opacity: 1; pointer-events: auto; }
+.tree-region-label:hover { color: var(--gazin-white); background: rgb(var(--gazin-blue-bright-rgb) / .3); }
+
+/* Region bar */
+.tree-nav { position: relative; z-index: 4; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px; width: max-content; max-width: calc(100% - var(--gutter) * 2); margin: 14px auto 0; padding: 6px; border: 1px solid rgb(var(--gazin-blue-tint-rgb) / .16); border-radius: 99px; background: rgb(var(--gazin-navy-rgb) / .7); backdrop-filter: blur(10px); transition: opacity .5s ease; }
+.tree-nav[data-ready='false'] { opacity: .45; }
+.tree-nav button { display: inline-flex; align-items: center; gap: 7px; min-height: 40px; padding: 0 16px; border: 0; border-radius: 99px; background: transparent; color: var(--gazin-blue-tint); font: 600 11.5px var(--font-sans); letter-spacing: .16em; text-transform: uppercase; transition: background .25s ease, color .25s ease; }
+.tree-nav .tree-nav-overview { letter-spacing: .04em; text-transform: none; font-size: 13px; }
+.tree-nav button:hover:not(:disabled) { color: var(--gazin-white); background: rgb(var(--gazin-blue-bright-rgb) / .18); }
+.tree-nav button[aria-pressed='true'] { color: var(--gazin-white); background: var(--gradient-primary); box-shadow: 0 6px 20px -8px var(--gazin-blue-bright); }
+.tree-nav button:disabled { cursor: default; }
+.tree-nav button:focus-visible, .tree-panel button:focus-visible { outline: 2px solid var(--gazin-blue-bright); outline-offset: 2px; }
+.tree-nav-rule { width: 1px; height: 20px; background: rgb(var(--gazin-blue-tint-rgb) / .2); }
+
+/* Contextual panel (never a full modal: the tree stays visible) */
+.tree-panel { position: relative; z-index: 4; margin: 16px var(--gutter) 0; padding: 26px 24px 22px; border: 1px solid rgb(var(--gazin-blue-tint-rgb) / .18); border-radius: 20px; background: linear-gradient(160deg, rgb(var(--gazin-blue-rgb) / .55), rgb(var(--gazin-navy-rgb) / .86)); backdrop-filter: blur(14px); box-shadow: 0 30px 70px -30px rgb(0 0 0 / .7); animation: tree-panel-in .45s cubic-bezier(.2, .8, .2, 1) both; }
+@keyframes tree-panel-in { from { opacity: 0; translate: 0 14px; } }
+/* Above the panel content (which animates with its own layer), so the whole button is clickable. */
+.tree-panel-close { position: absolute; top: 12px; right: 12px; z-index: 2; display: grid; place-items: center; width: 40px; height: 40px; border: 0; border-radius: 50%; background: rgb(var(--gazin-white-rgb) / .08); color: var(--gazin-white); transition: background .25s ease; }
+.tree-panel-close:hover { background: rgb(var(--gazin-white-rgb) / .18); }
+.tree-panel-body { display: grid; gap: 12px; animation: tree-fade .35s ease both; }
+@keyframes tree-fade { from { opacity: 0; } }
+.tree-panel-region { padding-right: 44px; display: flex; align-items: center; gap: 8px; font-size: 10.5px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--gazin-blue-tint); }
+.tree-panel-region span { width: 6px; height: 6px; border-radius: 50%; background: var(--gazin-blue-bright); }
+.tree-panel h3 { padding-right: 36px; font: 700 clamp(22px, 1.8vw, 28px)/1.15 var(--font-display); letter-spacing: -.03em; color: var(--gazin-white); }
+.tree-panel-text { font-size: 15px; line-height: 1.65; color: var(--gazin-blue-light); }
+.tree-panel-note { font-size: 12px; line-height: 1.5; color: var(--gazin-gray-light); font-style: italic; }
+.tree-panel-list { display: grid; gap: 2px; margin: 4px 0 0; padding: 0; list-style: none; }
+.tree-panel-list button { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 40px; padding: 8px 10px; border: 0; border-radius: 10px; background: transparent; color: var(--gazin-white); font: 500 14px/1.3 var(--font-sans); text-align: left; transition: background .2s ease; }
+.tree-panel-list button:hover { background: rgb(var(--gazin-blue-bright-rgb) / .18); }
+.tree-panel-dot { flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--gazin-blue-bright); box-shadow: 0 0 10px var(--gazin-blue-bright); }
+.tree-panel-dot.accent-orange { background: var(--gazin-orange); box-shadow: 0 0 10px var(--gazin-orange); }
+.tree-panel-dot.accent-green { background: var(--gazin-green); box-shadow: 0 0 10px var(--gazin-green); }
+.tree-panel-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 8px; font-size: 12px; font-weight: 600; letter-spacing: .1em; color: var(--gazin-blue-tint); font-variant-numeric: tabular-nums; }
+.tree-panel-nav button { display: inline-grid; place-items: center; min-width: 40px; height: 40px; border: 1px solid rgb(var(--gazin-blue-tint-rgb) / .25); border-radius: 99px; background: transparent; color: var(--gazin-white); transition: background .2s ease; }
+.tree-panel-nav button:hover:not(:disabled) { background: rgb(var(--gazin-blue-bright-rgb) / .25); }
+.tree-panel-nav button:disabled { opacity: .3; }
+.tree-panel-nav .tree-panel-all { display: inline-flex; gap: 8px; margin-left: auto; padding: 0 14px; font: 600 12.5px var(--font-sans); }
+
+/* Closing of the Essência category */
+.tree-closing { display: grid; justify-items: center; gap: 16px; padding: clamp(80px, 10vw, 140px) var(--gutter) clamp(96px, 11vw, 150px); text-align: center; }
+.tree-closing-title { max-width: 900px; font: 800 clamp(34px, 4.6vw, 76px)/1.02 var(--font-display); letter-spacing: -.05em; background: linear-gradient(120deg, var(--gazin-white) 30%, var(--gazin-blue-text)); -webkit-background-clip: text; background-clip: text; color: transparent; text-wrap: balance; }
+.tree-closing-text { max-width: 620px; font-size: 16px; line-height: 1.75; color: var(--gazin-gray-light); }
+
+/* Desktop: full-screen stage with overlays */
+@media (min-width: 1100px) {
+  .tree-pin { height: 100vh; height: 100svh; min-height: 640px; padding: 0; }
+  .tree-stage { position: absolute; inset: 0; height: auto; margin: 0; }
+  .tree-head { position: absolute; top: 50%; left: 0; width: min(29vw, 410px); translate: 0 -54%; }
+  .tree-head[data-overlay='off'] { opacity: 0; translate: -24px -54%; pointer-events: none; }
+  .tree-nav { position: absolute; left: 50%; bottom: clamp(18px, 3.2vh, 32px); margin: 0; translate: -50% 0; }
+  .tree-panel { position: absolute; top: 50%; right: var(--gutter); width: min(27vw, 390px); max-height: calc(100% - 200px); margin: 0; overflow-y: auto; translate: 0 -54%; }
+}
+@media (max-width: 767px) {
+  /* One row: the overview becomes an icon (its accessible name stays on the button). */
+  .tree-nav { flex-wrap: nowrap; justify-content: space-between; gap: 2px; width: calc(100% - var(--gutter) * 2); padding: 4px; }
+  .tree-nav button { min-height: 40px; padding: 0 9px; font-size: 10px; letter-spacing: .08em; }
+  .tree-nav .tree-nav-overview { width: 40px; padding: 0; justify-content: center; }
+  .tree-nav .tree-nav-overview span { display: none; }
+  .tree-nav-rule { display: none; }
+  .tree-label-text { max-width: 150px; font-size: 11px; white-space: normal; }
+  .tree-region-label { font-size: 10px; padding: 6px 10px; }
+}
+html:not(.motion-enabled) .tree-panel, html:not(.motion-enabled) .tree-panel-body { animation: none; }
+.tree-panel h3:focus { outline: none; }

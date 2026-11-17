@@ -29,6 +29,9 @@ export function createScrollManager(smooth: boolean, explicitlyEnabled = false) 
     target.focus({ preventScroll: true })
   }
 
+  // Lenis ignores CSS scroll-margin; honour it so the fixed navigation never covers titles.
+  const marginOf = (target: HTMLElement) => parseFloat(getComputedStyle(target).scrollMarginTop) || 0
+
   function targetFromHash(hash: string) {
     try { return document.getElementById(decodeURIComponent(hash.slice(1))) } catch { return null }
   }
@@ -45,18 +48,28 @@ export function createScrollManager(smooth: boolean, explicitlyEnabled = false) 
     if (location.hash !== url.hash) history.pushState(null, '', url.hash)
     // Keyboard focus and native anchor jumps can precede Lenis's scroll event.
     lenis.resize()
-    lenis.scrollTo(target, { duration: 0.85, onComplete: () => focusTarget(target) })
+    // Focus moves to the target when the scroll ends, unless the reader interacted meanwhile
+    // (e.g. reopened and closed the menu): then their focus wins.
+    const interaction = ++interactions
+    lenis.scrollTo(target, { offset: -marginOf(target), duration: 0.85, onComplete: () => { if (interaction === interactions) focusTarget(target) } })
   }
+  let interactions = 0
+  const onInteraction = () => { interactions++ }
+  document.addEventListener('pointerdown', onInteraction, true)
+  document.addEventListener('keydown', onInteraction, true)
 
   const alignHash = () => {
     const target = targetFromHash(location.hash)
     if (target) {
-      if (lenis) { lenis.resize(); lenis.scrollTo(target, { immediate: true }) }
+      if (lenis) { lenis.resize(); lenis.scrollTo(target, { offset: -marginOf(target), immediate: true }) }
       else target.scrollIntoView({ behavior: 'instant' })
       ScrollTrigger.update()
     }
   }
   const onRefresh = () => lenis?.resize()
+  // Modals (e.g. the history viewer) pause smooth scrolling while open.
+  const onScrollLock = (event: Event) => { if ((event as CustomEvent<boolean>).detail) lenis?.stop(); else lenis?.start() }
+  window.addEventListener('brandbook:scroll-lock', onScrollLock)
   const onVisibility = () => { if (!document.hidden) { lenis?.resize(); ScrollTrigger.update() } }
   document.addEventListener('click', onAnchor)
   document.addEventListener('visibilitychange', onVisibility)
@@ -71,8 +84,11 @@ export function createScrollManager(smooth: boolean, explicitlyEnabled = false) 
       })
       temporaryFocusTargets.clear()
       document.removeEventListener('click', onAnchor)
+      document.removeEventListener('pointerdown', onInteraction, true)
+      document.removeEventListener('keydown', onInteraction, true)
       document.removeEventListener('visibilitychange', onVisibility)
       window.removeEventListener('hashchange', alignHash)
+      window.removeEventListener('brandbook:scroll-lock', onScrollLock)
       ScrollTrigger.removeEventListener('refresh', onRefresh)
       gsap.ticker.remove(tick)
       lenis?.off('scroll', ScrollTrigger.update)

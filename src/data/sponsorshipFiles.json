@@ -1,0 +1,195 @@
+{
+  "images": {
+    "vex-identidade": {
+      "path": "assets/patrocinios-eventos/vex-identidade.jpg",
+      "width": 2000,
+      "height": 667,
+      "source": "VEX26/TELAS VEX26/TELAS VEX ESTÁTICA/15x5.jpg"
+    },
+    "vex-palco": {
+      "path": "assets/patrocinios-eventos/vex-palco.jpg",
+      "width": 1600,
+      "height": 900,
+      "source": "VEX26/BANNERS VEX26/MARCAS LATERAL PALCO/SIMULAÇÃO MARCAS LATERAL VEX.jpg"
+    },
+    "vex-fornecedores": {
+      "path": "assets/patrocinios-eventos/vex-fornecedores.jpg",
+      "width": 2000,
+      "height": 667,
+      "source": "VEX26/TELAS VEX26/ENCONTRO COM FORNECEDORES/15x5.jpg"
+    },
+    "vex-livro": {
+      "path": "assets/patrocinios-eventos/vex-livro.jpg",
+      "width": 2000,
+      "height": 667,
+      "source": "VEX26/TELAS VEX26/NOVO LIVRO DO MÁRIO GAZIN/NOVO LIVRO DO MÁRIO GAZIN - 15x5.jpg"
+    },
+    "vex-pintando7": {
+      "path": "assets/patrocinios-eventos/vex-pintando7.jpg",
+      "width": 2000,
+      "height": 667,
+      "source": "VEX26/TELAS VEX26/PINTANDO O 7/15x5.jpg"
+    },
+    "vex-credencial": {
+      "path": "assets/patrocinios-eventos/vex-credencial.jpg",
+      "width": 900,
+      "height": 1300,
+      "source": "VEX26/BANNERS VEX26/PONTO RETIRADA CREDENCIAL/PONTO RETIRADA CREDENCIAL - AxL 1,30x0,90m.jpg"
+    },
+    "vex-totem": {
+      "path": "assets/patrocinios-eventos/vex-totem.jpg",
+      "width": 800,
+      "height": 1600,
+      "source": "TOTENS VEX26 SERVIÇOS/TOTENS VEX26 SERVIÇOS - GAZINBANK.jpg"
+    },
+    "vex-restaurante": {
+      "path": "assets/patrocinios-eventos/vex-restaurante.jpg",
+      "width": 900,
+      "height": 1800,
+      "source": "VEX26/BANNERS VEX26/RESTAURANTES/BANNER RESTAURANTE VEX - AxL 6,72x3,36m.jpg"
+    },
+    "vex-fotos-qr": {
+      "path": "assets/patrocinios-eventos/vex-fotos-qr.jpg",
+      "width": 800,
+      "height": 1422,
+      "source": "VEX26/TELAS VEX26/FOTOGRAFIAS/FOTOS 1° DIA VEX26.jpg"
+    },
+    "vex-cracha": {
+      "path": "assets/patrocinios-eventos/vex-cracha.jpg",
+      "width": 700,
+      "height": 1050,
+      "source": "CRACHÁ POSSO AJUDAR OFICINAS VEX26/CRACHÁ POSSO AJUDAR OFICINAS VEX26.pdf"
+    },
+    "instituto-bandeira": {
+      "path": "assets/patrocinios-eventos/instituto-bandeira.jpg",
+      "width": 1800,
+      "height": 1266,
+      "source": "BANDEIRAS INSTITUTO MÁRIO GAZIN/BANDEIRAS INSTITUTO MÁRIO GAZIN - MODELO 01.jpg"
+    },
+    "instituto-bandeira-simulacao": {
+      "path": "assets/patrocinios-eventos/instituto-bandeira-simulacao.jpg",
+      "width": 900,
+      "height": 1599,
+      "source": "BANDEIRAS INSTITUTO MÁRIO GAZIN/SIMULAÇÃO 01.png"
+    },
+    "vex-foto-plenaria": {
+      "path": "assets/patrocinios-eventos/vex-foto-plenaria.jpg",
+      "width": 1600,
+      "height": 1066,
+      "source": "Patrocínios e Eventos/VEX/CORTELLA-28.jpg"
+    },
+    "vex-foto-fornecedores-palco": {
+      "path": "assets/patrocinios-eventos/vex-foto-fornecedores-palco.jpg",
+      "width": 1600,
+      "height": 1066,
+      "source": "Patrocínios e Eventos/VEX/ENCONTRO DE FORNECEDORES-68.jpg"
+    },
+    "vex-foto-fornecedores-salao": {
+      "path": "assets/patrocinios-eventos/vex-foto-fornecedores-salao.jpg",
+      "width": 1600,
+      "height": 1066,
+      "source": "Patrocínios e Eventos/VEX/ENCONTRO DE FORNECEDORES-100.jpg"
+    },
+    "vex-foto-convencao": {
+      "path": "assets/patrocinios-eventos/vex-foto-convencao.jpg",
+      "width": 1600,
+      "height": 1066,
+      "source": "Patrocínios e Eventos/VEX/CONVENÇÃO INTERNA-143.jpg"
+    },
+    "vex-foto-show": {
+      "path": "assets/patrocinios-eventos/vex-foto-show.jpg",
+      "width": 1600,
+      "height": 1066,
+      "source": "Patrocínios e Eventos/VEX/CLÁUDIO DUARTE-02 (41).jpg"
+    },
+    "instituto-capa": {
+      "path": "assets/patrocinios-eventos/instituto-capa.jpg",
+      "width": 1800,
+      "height": 1200,
+      "source": "Patrocínios e Eventos/INSTITUTO MÁRIO GAZIN/CAPA.jpg"
+    },
+    "instituto-pintando7": {
+      "path": "assets/patrocinios-eventos/instituto-pintando7.jpg",
+      "width": 1600,
+      "height": 900,
+      "source": "Patrocínios e Eventos/INSTITUTO MÁRIO GAZIN/PINTANDO O 7.jpg"
+    },
+    "instituto-cine": {
+      "path": "assets/patrocinios-eventos/instituto-cine.jpg",
+      "width": 1000,
+      "height": 461,
+      "source": "Patrocínios e Eventos/INSTITUTO MÁRIO GAZIN/CINE GAZIN.jfif"
+    },
+    "instituto-orquestra": {
+      "path": "assets/patrocinios-eventos/instituto-orquestra.jpg",
+      "width": 1600,
+      "height": 1067,
+      "source": "Patrocínios e Eventos/INSTITUTO MÁRIO GAZIN/ORQUESTRA ALFREDO GAZIN.jpg"
+    },
+    "instituto-natal": {
+      "path": "assets/patrocinios-eventos/instituto-natal.jpg",
+      "width": 1800,
+      "height": 829,
+      "source": "Patrocínios e Eventos/INSTITUTO MÁRIO GAZIN/ERA UMA VEZ O NATAL.jpg"
+    },
+    "clube-porto-velho-escudo": {
+      "path": "assets/patrocinios-eventos/clube-porto-velho-escudo.png",
+      "width": 413,
+      "height": 500,
+      "source": "Patrocínios e Eventos/ESPORTIVOS/PORTO VELHO/PortoVelhoEC.png"
+    },
+    "clube-porto-velho-foto": {
+      "path": "assets/patrocinios-eventos/clube-porto-velho-foto.jpg",
+      "width": 924,
+      "height": 1232,
+      "source": "Patrocínios e Eventos/ESPORTIVOS/PORTO VELHO/obrigado-meu-deus-.avif"
+    },
+    "clube-remo-escudo": {
+      "path": "assets/patrocinios-eventos/clube-remo-escudo.png",
+      "width": 500,
+      "height": 500,
+      "source": "Patrocínios e Eventos/ESPORTIVOS/REMO/Clube_do_Remo.svg.webp"
+    },
+    "clube-remo-foto": {
+      "path": "assets/patrocinios-eventos/clube-remo-foto.jpg",
+      "width": 1600,
+      "height": 900,
+      "source": "Patrocínios e Eventos/ESPORTIVOS/REMO/confederacao-brasileira-de-futebol-detalha-tabela-e-remo-1794066371152.jpg"
+    },
+    "clube-paysandu-escudo": {
+      "path": "assets/patrocinios-eventos/clube-paysandu-escudo.png",
+      "width": 400,
+      "height": 499,
+      "source": "Patrocínios e Eventos/ESPORTIVOS/PAYSANDU/PaysanduSC.png"
+    },
+    "clube-paysandu-foto": {
+      "path": "assets/patrocinios-eventos/clube-paysandu-foto.jpg",
+      "width": 1600,
+      "height": 1280,
+      "source": "Patrocínios e Eventos/ESPORTIVOS/PAYSANDU/55389456279_9dded0e7c0_k.jpg"
+    },
+    "feira-estande-colchoes": {
+      "path": "assets/patrocinios-eventos/feira-estande-colchoes.jpg",
+      "width": 1600,
+      "height": 1067,
+      "source": "Patrocínios e Eventos/FEIRAS/Gazin 04 - Expo-63.jpg"
+    },
+    "feira-estande-01": {
+      "path": "assets/patrocinios-eventos/feira-estande-01.jpg",
+      "width": 1600,
+      "height": 1067,
+      "source": "Patrocínios e Eventos/FEIRAS/Gazin 125254 lucca maresca.jpg"
+    },
+    "feira-estande-02": {
+      "path": "assets/patrocinios-eventos/feira-estande-02.jpg",
+      "width": 1600,
+      "height": 1067,
+      "source": "Patrocínios e Eventos/FEIRAS/PERA4183.jpg"
+    }
+  },
+  "sheet": {
+    "path": "assets/patrocinios-eventos/feiras-2027-gazin.xlsx",
+    "bytes": 11915,
+    "source": "FEIRAS 2027 - OFICIAL (1).xlsx"
+  }
+}

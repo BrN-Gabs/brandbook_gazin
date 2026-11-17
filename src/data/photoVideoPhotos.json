@@ -1,0 +1,37 @@
+{
+  "retrato-camiseta-verde": {
+    "width": 1033,
+    "height": 1400,
+    "source": "retrato-camiseta-verde"
+  },
+  "retrato-camiseta-azul": {
+    "width": 1050,
+    "height": 1400,
+    "source": "retrato-camiseta-azul"
+  },
+  "retrato-camiseta-branca": {
+    "width": 1050,
+    "height": 1400,
+    "source": "retrato-camiseta-branca"
+  },
+  "plano-medio": {
+    "width": 880,
+    "height": 1100,
+    "source": "retrato-camiseta-branca"
+  },
+  "close-up-retrato": {
+    "width": 520,
+    "height": 650,
+    "source": "retrato-camiseta-branca"
+  },
+  "tratamento-antes": {
+    "width": 1050,
+    "height": 1400,
+    "source": "retrato-camiseta-azul"
+  },
+  "tratamento-depois": {
+    "width": 1050,
+    "height": 1400,
+    "source": "retrato-camiseta-azul"
+  }
+}

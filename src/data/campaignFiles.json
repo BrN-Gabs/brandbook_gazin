@@ -1,0 +1,391 @@
+{
+  "logos": {
+    "61-anos": {
+      "file": "Logo 61 anos.png",
+      "path": "assets/campanhas/2027/logos/61-anos/Logo 61 anos.png",
+      "preview": "assets/campanhas/2027/previas/61-anos.webp",
+      "bytes": 2731325,
+      "width": 4899,
+      "height": 3100,
+      "previewWidth": 720,
+      "previewHeight": 456
+    },
+    "queima-total-nacional": {
+      "file": "QUEIMA TOTAL GAZIN.png",
+      "path": "assets/campanhas/2027/logos/queima-total-nacional/QUEIMA TOTAL GAZIN.png",
+      "preview": "assets/campanhas/2027/previas/queima-total-nacional.webp",
+      "bytes": 2060496,
+      "width": 1672,
+      "height": 941,
+      "previewWidth": 720,
+      "previewHeight": 405
+    },
+    "verao-e-na-gazin": {
+      "file": "VERÃO É NA GAZIN.png",
+      "path": "assets/campanhas/2027/logos/verao-e-na-gazin/VERÃO É NA GAZIN.png",
+      "preview": "assets/campanhas/2027/previas/verao-e-na-gazin.webp",
+      "bytes": 1102641,
+      "width": 1630,
+      "height": 965,
+      "previewWidth": 720,
+      "previewHeight": 426
+    },
+    "os-precos-cairam-na-folia": {
+      "file": "OS PREÇOS CAÍRAM NA FOLIA.png",
+      "path": "assets/campanhas/2027/logos/os-precos-cairam-na-folia/OS PREÇOS CAÍRAM NA FOLIA.png",
+      "preview": "assets/campanhas/2027/previas/os-precos-cairam-na-folia.webp",
+      "bytes": 1955220,
+      "width": 1536,
+      "height": 1024,
+      "previewWidth": 720,
+      "previewHeight": 480
+    },
+    "semana-do-esportista": {
+      "file": "SEMANA DO ESPORTISTA.png",
+      "path": "assets/campanhas/2027/logos/semana-do-esportista/SEMANA DO ESPORTISTA.png",
+      "preview": "assets/campanhas/2027/previas/semana-do-esportista.webp",
+      "bytes": 1238113,
+      "width": 1942,
+      "height": 809,
+      "previewWidth": 720,
+      "previewHeight": 300
+    },
+    "tudo-que-ela-quer": {
+      "file": "TUDO O QUE ELA QUER.png",
+      "path": "assets/campanhas/2027/logos/tudo-que-ela-quer/TUDO O QUE ELA QUER.png",
+      "preview": "assets/campanhas/2027/previas/tudo-que-ela-quer.webp",
+      "bytes": 2125508,
+      "width": 1374,
+      "height": 1145,
+      "previewWidth": 720,
+      "previewHeight": 600
+    },
+    "quinzena-do-consumidor": {
+      "file": "QUINZENA DO CONSUMIDOR.png",
+      "path": "assets/campanhas/2027/logos/quinzena-do-consumidor/QUINZENA DO CONSUMIDOR.png",
+      "preview": "assets/campanhas/2027/previas/quinzena-do-consumidor.webp",
+      "bytes": 1447981,
+      "width": 1237,
+      "height": 1271,
+      "previewWidth": 701,
+      "previewHeight": 720
+    },
+    "parece-mentira-mas-e-verdade": {
+      "file": "PARECE MENTIRA, MAS É VERDADE.png",
+      "path": "assets/campanhas/2027/logos/parece-mentira-mas-e-verdade/PARECE MENTIRA, MAS É VERDADE.png",
+      "preview": "assets/campanhas/2027/previas/parece-mentira-mas-e-verdade.webp",
+      "bytes": 1601169,
+      "width": 1536,
+      "height": 1024,
+      "previewWidth": 720,
+      "previewHeight": 480
+    },
+    "o-melhor-pra-mamae": {
+      "file": "O MELHOR PRA MAMÃE DE A a Z.png",
+      "path": "assets/campanhas/2027/logos/o-melhor-pra-mamae/O MELHOR PRA MAMÃE DE A a Z.png",
+      "preview": "assets/campanhas/2027/previas/o-melhor-pra-mamae.webp",
+      "bytes": 2886984,
+      "width": 2078,
+      "height": 1297,
+      "previewWidth": 720,
+      "previewHeight": 449
+    },
+    "par-perfeito": {
+      "file": "PAR PERFEITO.png",
+      "path": "assets/campanhas/2027/logos/par-perfeito/PAR PERFEITO.png",
+      "preview": "assets/campanhas/2027/previas/par-perfeito.webp",
+      "bytes": 2930920,
+      "width": 2078,
+      "height": 1299,
+      "previewWidth": 720,
+      "previewHeight": 450
+    },
+    "festanca-do-preco-baixo": {
+      "file": "FESTANÇA DO PREÇO BAIXO GAZIN.png",
+      "path": "assets/campanhas/2027/logos/festanca-do-preco-baixo/FESTANÇA DO PREÇO BAIXO GAZIN.png",
+      "preview": "assets/campanhas/2027/previas/festanca-do-preco-baixo.webp",
+      "bytes": 2579555,
+      "width": 2078,
+      "height": 1387,
+      "previewWidth": 720,
+      "previewHeight": 481
+    },
+    "pintando-7-apae": {
+      "file": "PT7.png",
+      "path": "assets/campanhas/2027/logos/pintando-7-apae/PT7.png",
+      "preview": "assets/campanhas/2027/previas/pintando-7-apae.webp",
+      "bytes": 5328974,
+      "width": 2450,
+      "height": 2236,
+      "previewWidth": 720,
+      "previewHeight": 657
+    },
+    "o-melhor-pro-paizao": {
+      "file": "O MELHOR PRO PAIZÃO.png",
+      "path": "assets/campanhas/2027/logos/o-melhor-pro-paizao/O MELHOR PRO PAIZÃO.png",
+      "preview": "assets/campanhas/2027/previas/o-melhor-pro-paizao.webp",
+      "bytes": 2507846,
+      "width": 2078,
+      "height": 891,
+      "previewWidth": 720,
+      "previewHeight": 309
+    },
+    "13-da-sorte": {
+      "file": "13 DA SORTE.png",
+      "path": "assets/campanhas/2027/logos/13-da-sorte/13 DA SORTE.png",
+      "preview": "assets/campanhas/2027/previas/13-da-sorte.webp",
+      "bytes": 2896291,
+      "width": 2078,
+      "height": 1303,
+      "previewWidth": 720,
+      "previewHeight": 451
+    },
+    "semana-da-tv-e-informatica": {
+      "file": "SEMANA DA TV E INFORMÁTICA.png",
+      "path": "assets/campanhas/2027/logos/semana-da-tv-e-informatica/SEMANA DA TV E INFORMÁTICA.png",
+      "preview": "assets/campanhas/2027/previas/semana-da-tv-e-informatica.webp",
+      "bytes": 3268015,
+      "width": 2078,
+      "height": 1299,
+      "previewWidth": 720,
+      "previewHeight": 450
+    },
+    "o-gerente-viajou": {
+      "file": "O GERENTE VIAJOU.png",
+      "path": "assets/campanhas/2027/logos/o-gerente-viajou/O GERENTE VIAJOU.png",
+      "preview": "assets/campanhas/2027/previas/o-gerente-viajou.webp",
+      "bytes": 3402573,
+      "width": 2078,
+      "height": 1303,
+      "previewWidth": 720,
+      "previewHeight": 451
+    },
+    "semana-do-brasil": {
+      "file": "SEMANA DO BRASIL.png",
+      "path": "assets/campanhas/2027/logos/semana-do-brasil/SEMANA DO BRASIL.png",
+      "preview": "assets/campanhas/2027/previas/semana-do-brasil.webp",
+      "bytes": 3124225,
+      "width": 2078,
+      "height": 1303,
+      "previewWidth": 720,
+      "previewHeight": 451
+    },
+    "quinzena-do-cliente": {
+      "file": "QUINZENA DO CLIENTE.png",
+      "path": "assets/campanhas/2027/logos/quinzena-do-cliente/QUINZENA DO CLIENTE.png",
+      "preview": "assets/campanhas/2027/previas/quinzena-do-cliente.webp",
+      "bytes": 3026284,
+      "width": 2078,
+      "height": 1109,
+      "previewWidth": 720,
+      "previewHeight": 384
+    },
+    "outubro-e-10": {
+      "file": "OUTUBRO É 10.png",
+      "path": "assets/campanhas/2027/logos/outubro-e-10/OUTUBRO É 10.png",
+      "preview": "assets/campanhas/2027/previas/outubro-e-10.webp",
+      "bytes": 2667421,
+      "width": 2078,
+      "height": 915,
+      "previewWidth": 720,
+      "previewHeight": 317
+    },
+    "o-melhor-pra-criancada": {
+      "file": "O MELHOR PRA CRIANÇADA.png",
+      "path": "assets/campanhas/2027/logos/o-melhor-pra-criancada/O MELHOR PRA CRIANÇADA.png",
+      "preview": "assets/campanhas/2027/previas/o-melhor-pra-criancada.webp",
+      "bytes": 2523270,
+      "width": 2048,
+      "height": 1322,
+      "previewWidth": 720,
+      "previewHeight": 465
+    },
+    "black-friday-show": {
+      "file": "BLACK FRIDAY SHOW.png",
+      "path": "assets/campanhas/2027/logos/black-friday-show/BLACK FRIDAY SHOW.png",
+      "preview": "assets/campanhas/2027/previas/black-friday-show.webp",
+      "bytes": 2367778,
+      "width": 1536,
+      "height": 1024,
+      "previewWidth": 720,
+      "previewHeight": 480
+    },
+    "natal-mais-azul-do-brasil": {
+      "file": "NATAL MAIS AZUL DO BRASIL.png",
+      "path": "assets/campanhas/2027/logos/natal-mais-azul-do-brasil/NATAL MAIS AZUL DO BRASIL.png",
+      "preview": "assets/campanhas/2027/previas/natal-mais-azul-do-brasil.webp",
+      "bytes": 446912,
+      "width": 643,
+      "height": 495,
+      "previewWidth": 643,
+      "previewHeight": 495
+    },
+    "aniversario-gazin": {
+      "file": "ANIVERSÁRIO GAZIN.png",
+      "path": "assets/campanhas/2027/logos/aniversario-gazin/ANIVERSÁRIO GAZIN.png",
+      "preview": "assets/campanhas/2027/previas/aniversario-gazin.webp",
+      "bytes": 2775273,
+      "width": 2078,
+      "height": 1039,
+      "previewWidth": 720,
+      "previewHeight": 360
+    },
+    "colchao-da-virada": {
+      "file": "COLCHÃO DA VIRADA.png",
+      "path": "assets/campanhas/2027/logos/colchao-da-virada/COLCHÃO DA VIRADA.png",
+      "preview": "assets/campanhas/2027/previas/colchao-da-virada.webp",
+      "bytes": 3346170,
+      "width": 2048,
+      "height": 1365,
+      "previewWidth": 720,
+      "previewHeight": 480
+    },
+    "selfie-da-virada": {
+      "file": "SELFIE DA VIRADA.png",
+      "path": "assets/campanhas/2027/logos/selfie-da-virada/SELFIE DA VIRADA.png",
+      "preview": "assets/campanhas/2027/previas/selfie-da-virada.webp",
+      "bytes": 2930535,
+      "width": 2078,
+      "height": 1030,
+      "previewWidth": 720,
+      "previewHeight": 357
+    },
+    "dia-unico": {
+      "file": "DIA ÚNICO.png",
+      "path": "assets/campanhas/2027/logos/dia-unico/DIA ÚNICO.png",
+      "preview": "assets/campanhas/2027/previas/dia-unico.webp",
+      "bytes": 1534406,
+      "width": 1774,
+      "height": 887,
+      "previewWidth": 720,
+      "previewHeight": 360
+    },
+    "dia-d": {
+      "file": "DIA D.png",
+      "path": "assets/campanhas/2027/logos/dia-d/DIA D.png",
+      "preview": "assets/campanhas/2027/previas/dia-d.webp",
+      "bytes": 1973745,
+      "width": 1535,
+      "height": 1025,
+      "previewWidth": 720,
+      "previewHeight": 481
+    },
+    "alerta-de-ofertas": {
+      "file": "ALERTA DE OFERTAS.png",
+      "path": "assets/campanhas/2027/logos/alerta-de-ofertas/ALERTA DE OFERTAS.png",
+      "preview": "assets/campanhas/2027/previas/alerta-de-ofertas.webp",
+      "bytes": 1716096,
+      "width": 1536,
+      "height": 1024,
+      "previewWidth": 720,
+      "previewHeight": 480
+    },
+    "fecha-mes": {
+      "file": "FECHA MÊS.png",
+      "path": "assets/campanhas/2027/logos/fecha-mes/FECHA MÊS.png",
+      "preview": "assets/campanhas/2027/previas/fecha-mes.webp",
+      "bytes": 2232561,
+      "width": 1377,
+      "height": 1142,
+      "previewWidth": 720,
+      "previewHeight": 597
+    }
+  },
+  "pages": {
+    "calendario-capa": {
+      "path": "assets/campanhas/2027/previas/calendario-capa.jpg",
+      "width": 1032,
+      "height": 833
+    },
+    "61-anos": {
+      "path": "assets/campanhas/2027/previas/61-anos.jpg",
+      "width": 1032,
+      "height": 833
+    },
+    "hoje-e-dia-d": {
+      "path": "assets/campanhas/2027/previas/hoje-e-dia-d.jpg",
+      "width": 1032,
+      "height": 833
+    },
+    "pagina-9": {
+      "path": "assets/campanhas/2027/previas/pagina-9.jpg",
+      "width": 1032,
+      "height": 833
+    },
+    "pagina-10": {
+      "path": "assets/campanhas/2027/previas/pagina-10.jpg",
+      "width": 1032,
+      "height": 833
+    },
+    "pagina-12": {
+      "path": "assets/campanhas/2027/previas/pagina-12.jpg",
+      "width": 1032,
+      "height": 833
+    },
+    "pagina-14": {
+      "path": "assets/campanhas/2027/previas/pagina-14.jpg",
+      "width": 1032,
+      "height": 833
+    },
+    "pagina-16": {
+      "path": "assets/campanhas/2027/previas/pagina-16.jpg",
+      "width": 1032,
+      "height": 833
+    },
+    "pagina-18": {
+      "path": "assets/campanhas/2027/previas/pagina-18.jpg",
+      "width": 1032,
+      "height": 833
+    },
+    "pagina-20": {
+      "path": "assets/campanhas/2027/previas/pagina-20.jpg",
+      "width": 1032,
+      "height": 833
+    },
+    "pagina-22": {
+      "path": "assets/campanhas/2027/previas/pagina-22.jpg",
+      "width": 1032,
+      "height": 833
+    },
+    "pagina-24": {
+      "path": "assets/campanhas/2027/previas/pagina-24.jpg",
+      "width": 1032,
+      "height": 833
+    },
+    "pagina-26": {
+      "path": "assets/campanhas/2027/previas/pagina-26.jpg",
+      "width": 1032,
+      "height": 833
+    },
+    "pagina-28": {
+      "path": "assets/campanhas/2027/previas/pagina-28.jpg",
+      "width": 1032,
+      "height": 833
+    },
+    "pagina-30": {
+      "path": "assets/campanhas/2027/previas/pagina-30.jpg",
+      "width": 1032,
+      "height": 833
+    },
+    "pagina-32": {
+      "path": "assets/campanhas/2027/previas/pagina-32.jpg",
+      "width": 1032,
+      "height": 833
+    },
+    "hoje-e-dia-d-logo": {
+      "path": "assets/campanhas/2027/previas/hoje-e-dia-d-logo.webp",
+      "width": 1400,
+      "height": 718
+    }
+  },
+  "calendar": {
+    "path": "assets/campanhas/2027/calendario/calendario-gazin-2027.pdf",
+    "bytes": 38151927,
+    "pages": 37
+  },
+  "zip": {
+    "path": "assets/campanhas/2027/downloads/logos-campanhas-gazin-2027.zip",
+    "bytes": 70347248,
+    "files": 29
+  }
+}

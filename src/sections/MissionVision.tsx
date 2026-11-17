@@ -20,18 +20,17 @@ function PurposeContent({ statement, revealWords = false }: { statement: Purpose
 export function MissionVision() {
   return (
     <section id="missao-visao" aria-label={content.purpose.title}>
-      <div className="mission section-space">
+      <div id="missao" className="mission section-space">
         <div className="page-container purpose-layout">
           <div className="purpose-copy"><PurposeContent statement={content.purpose.mission} revealWords /></div>
-          <PurposePhotoFrame />
+          <PurposePhotoFrame photo={content.purpose.mission.photo} />
         </div>
       </div>
-      <div className="vision blue-section section-space">
+      <div id="visao" className="vision blue-section section-space">
         <div className="vision-panel" aria-hidden="true" />
-        <div className="vision-arc" aria-hidden="true" />
         <div className="page-container relative purpose-layout">
           <div className="purpose-copy"><PurposeContent statement={content.purpose.vision} /></div>
-          <PurposePhotoFrame />
+          <PurposePhotoFrame photo={content.purpose.vision.photo} />
         </div>
       </div>
     </section>

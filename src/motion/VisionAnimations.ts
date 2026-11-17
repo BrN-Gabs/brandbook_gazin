@@ -24,10 +24,6 @@ export function visionAnimations({ desktop, gentle }: MotionOptions) {
   gsap.fromTo(vision.querySelector('.vision-panel'), { scaleY: 0.82 }, {
     scaleY: 1, ease: 'none', scrollTrigger: { trigger: vision, start: 'top bottom', end: 'top 50%', scrub: true },
   })
-  gsap.fromTo(vision.querySelector('.vision-arc'), { y: 45, rotation: -12, scale: 0.96, opacity: 0.5 }, {
-    y: -65, rotation: 22, scale: 1.06, opacity: 1, ease: 'none',
-    scrollTrigger: { trigger: vision, start: 'top bottom', end: 'bottom top', scrub: 0.8 },
-  })
   gsap.to(vision.querySelector('.page-container'), {
     y: -22, ease: 'none', scrollTrigger: { trigger: vision, start: 'bottom 65%', end: 'bottom top', scrub: motionConfig.scrub },
   })

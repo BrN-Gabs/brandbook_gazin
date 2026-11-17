@@ -1,4 +1,5 @@
 import { test, expect, type Page } from '@playwright/test'
+import { skipOpening } from './helpers'
 import { mkdir } from 'node:fs/promises'
 
 async function settle(page: Page) {
@@ -23,7 +24,7 @@ test.describe('Narrativa com movimento habilitado', () => {
       await page.goto('/')
       await expect(page.locator('html')).toHaveClass(/motion-enabled/)
       await settle(page)
-      await expect(page.locator('.hero-logo')).toHaveCSS('opacity', '1')
+      await expect(page.locator('.dna-hero-logo')).toHaveCSS('opacity', '1')
       await mkdir('docs/screenshots/motion', { recursive: true })
       await page.screenshot({ path: `docs/screenshots/motion/abertura-${width}.png` })
       const stops = await page.locator('.mission, .vision, #valores, #pilares').evaluateAll(elements => elements.map(el => el.getBoundingClientRect().top + scrollY))
@@ -42,7 +43,7 @@ test.describe('Narrativa com movimento habilitado', () => {
       for (const top of [...stops].reverse()) await scrollTo(page, top)
       await scrollTo(page, 0)
       expect(Number(await page.locator('.mission-word').last().evaluate(el => getComputedStyle(el).opacity))).toBeLessThan(0.9)
-      await expect(page.locator('.hero-logo')).toHaveCSS('opacity', '1')
+      await expect(page.locator('.dna-hero-logo')).toHaveCSS('opacity', '1')
       await page.getByRole('link', { name: 'Voltar ao início', exact: true }).click()
       await expect(page.locator('#hero-title')).toBeInViewport()
       await page.waitForTimeout(1000)
@@ -52,10 +53,12 @@ test.describe('Narrativa com movimento habilitado', () => {
   }
 
   test('Scrub reversível, pin curto e mudança de preferência em tempo real', async ({ page }) => {
+    test.setTimeout(60000)
     await page.setViewportSize({ width: 1440, height: 1000 })
     await page.goto('/')
+    await skipOpening(page)
     await expect(page.locator('html')).toHaveClass(/motion-enabled/)
-    await expect(page.locator('.pin-spacer')).toHaveCount(1)
+    await expect(page.locator('.pin-spacer')).toHaveCount(3) // Missão, Nossa História e Árvore
     const top = await page.locator('.mission').evaluate(el => el.getBoundingClientRect().top + scrollY)
     await scrollTo(page, top + 310)
     const first = Number(await page.locator('.mission-word').first().evaluate(el => getComputedStyle(el).opacity))
@@ -67,12 +70,12 @@ test.describe('Narrativa com movimento habilitado', () => {
     expect(Number(await page.locator('.mission-word').last().evaluate(el => getComputedStyle(el).opacity))).toBeLessThan(0.6)
     await page.emulateMedia({ reducedMotion: 'reduce' })
     await expect(page.locator('html')).not.toHaveClass(/motion-enabled|lenis/)
-    await expect(page.locator('.pin-spacer')).toHaveCount(0)
+    await expect(page.locator('.pin-spacer')).toHaveCount(1) // Nossa História stays wheel-driven
     await expect(page.locator('.mission-word').last()).toHaveCSS('opacity', '1')
     await expect(page.locator('.vision .purpose-line-content').last()).toHaveCSS('opacity', '1')
     await expect(page.locator('.value-label').last()).toHaveCSS('opacity', '1')
     await page.emulateMedia({ reducedMotion: 'no-preference' })
-    await expect(page.locator('.pin-spacer')).toHaveCount(1)
+    await expect(page.locator('.pin-spacer')).toHaveCount(3)
     await page.setViewportSize({ width: 390, height: 844 })
     await expect(page.locator('.pin-spacer')).toHaveCount(0)
     await expect(page.locator('html')).not.toHaveClass(/lenis/)
@@ -91,6 +94,7 @@ test.describe('Narrativa com movimento habilitado', () => {
     await page.goBack()
     await expect(page.locator('#pilares')).toBeInViewport()
     await page.goto('/')
+    await skipOpening(page)
     await expect(page.locator('html')).toHaveClass(/motion-enabled/)
     await page.keyboard.press('Tab')
     await expect(page.locator('.skip-link')).toBeFocused()
@@ -105,7 +109,7 @@ test.describe('Narrativa com movimento habilitado', () => {
     await page.goto('/#pilares')
     await expect(page.locator('#pilares')).toBeInViewport()
     await expect(page.locator('.mission-word').last()).toHaveCSS('opacity', '1')
-    await expect(page.locator('.hero-logo')).toHaveCSS('opacity', '1')
+    await expect(page.locator('.dna-hero-logo')).toHaveCSS('opacity', '1')
     await expect(page.locator('.pillar-description')).toHaveCount(4)
     await expect(page.locator('html')).not.toHaveClass(/motion-enabled|lenis/)
   })
@@ -113,6 +117,7 @@ test.describe('Narrativa com movimento habilitado', () => {
   test('Wheel integrado e transição branca/azul sem saltos', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 1000 })
     await page.goto('/')
+    await skipOpening(page)
     await expect(page.locator('html')).toHaveClass(/lenis/)
     const missionTop = await page.locator('.mission').evaluate(el => el.getBoundingClientRect().top + scrollY)
     await scrollTo(page, missionTop)
@@ -135,9 +140,10 @@ test.describe('Narrativa com movimento habilitado', () => {
     })
     await page.setViewportSize({ width: 1440, height: 1000 })
     await page.goto('/')
+    await skipOpening(page)
     await expect(page.locator('html')).toHaveClass(/motion-enabled/)
     await expect(page.locator('html')).not.toHaveClass(/lenis/)
-    await expect(page.locator('.pin-spacer')).toHaveCount(0)
+    await expect(page.locator('.pin-spacer')).toHaveCount(2) // Nossa História (wheel) and the tree formation
     await page.locator('.vision').scrollIntoViewIfNeeded()
     await settle(page)
     await expect(page.locator('.mission-word').last()).toHaveCSS('opacity', '1')

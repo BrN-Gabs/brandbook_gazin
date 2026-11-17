@@ -1,4 +1,5 @@
 import { test, expect, type Locator, type Page } from '@playwright/test'
+import { skipOpening } from './helpers'
 
 async function positionAt(page: Page, target: Locator, ratio: number) {
   const top = await target.evaluate((element, viewportRatio) => element.getBoundingClientRect().top + scrollY - innerHeight * viewportRatio, ratio)
@@ -10,6 +11,7 @@ for (const width of [1440, 768, 390]) {
     await page.setViewportSize({ width, height: width === 390 ? 844 : 1000 })
     await page.emulateMedia({ reducedMotion: 'no-preference' })
     await page.goto('/')
+    await skipOpening(page)
     await expect(page.locator('html')).toHaveClass(/motion-enabled/)
     const heading = page.locator('.pillars-heading')
     const title = page.locator('.pillar h3').first()

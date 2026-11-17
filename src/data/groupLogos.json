@@ -1,0 +1,249 @@
+[
+  {
+    "slug": "gazin-holding",
+    "name": "Gazin Holding",
+    "source": "GAZIN HOLDING.png",
+    "width": 2115,
+    "height": 594,
+    "bytes": 49371,
+    "transparent": true,
+    "preview": {
+      "width": 1200,
+      "height": 337
+    }
+  },
+  {
+    "slug": "gazin-atacado",
+    "name": "Gazin Atacado",
+    "source": "Logo Gazin Atacado.png",
+    "width": 2666,
+    "height": 774,
+    "bytes": 91217,
+    "transparent": true,
+    "preview": {
+      "width": 1200,
+      "height": 348
+    }
+  },
+  {
+    "slug": "gazin-agronegocio",
+    "name": "Gazin Agronegócio",
+    "source": "GAZIN AGRONEGÓCIO.png",
+    "width": 2065,
+    "height": 581,
+    "bytes": 49698,
+    "transparent": true,
+    "preview": {
+      "width": 1200,
+      "height": 338
+    }
+  },
+  {
+    "slug": "gazin-auto-posto",
+    "name": "Gazin Auto Posto",
+    "source": "Auto Posto.png",
+    "width": 3259,
+    "height": 946,
+    "bytes": 82612,
+    "transparent": true,
+    "preview": {
+      "width": 1200,
+      "height": 348
+    }
+  },
+  {
+    "slug": "gazin-bank",
+    "name": "GazinBank",
+    "source": "GAZIN BANK.png",
+    "width": 2118,
+    "height": 596,
+    "bytes": 46662,
+    "transparent": true,
+    "preview": {
+      "width": 1200,
+      "height": 338
+    }
+  },
+  {
+    "slug": "gazin-colchoes",
+    "name": "Gazin Colchões",
+    "source": "Logo Gazin Colchões.png",
+    "width": 3497,
+    "height": 1015,
+    "bytes": 92502,
+    "transparent": true,
+    "preview": {
+      "width": 1200,
+      "height": 348
+    }
+  },
+  {
+    "slug": "gazin-com-br",
+    "name": "Gazin.com.br",
+    "source": "GAZIN.COM.png",
+    "width": 3435,
+    "height": 1145,
+    "bytes": 102543,
+    "transparent": true,
+    "preview": {
+      "width": 1200,
+      "height": 361
+    }
+  },
+  {
+    "slug": "consorcio-gazin",
+    "name": "Consórcio Gazin",
+    "source": "CONSÓRCIO GAZIN OFICIAL 2025 - AZUL.png",
+    "width": 836,
+    "height": 260,
+    "bytes": 16252,
+    "transparent": true,
+    "preview": {
+      "width": 836,
+      "height": 260
+    }
+  },
+  {
+    "slug": "gazin-fundos-de-investimento",
+    "name": "Gazin Fundos de Investimento",
+    "source": "Fundo de Investimentos - Azul.png",
+    "width": 4102,
+    "height": 1068,
+    "bytes": 125476,
+    "transparent": true,
+    "preview": {
+      "width": 1200,
+      "height": 312
+    }
+  },
+  {
+    "slug": "gazin-licitacoes",
+    "name": "Gazin Licitações",
+    "source": "Logo Gazin Licitações.png",
+    "width": 3592,
+    "height": 1042,
+    "bytes": 136533,
+    "transparent": true,
+    "preview": {
+      "width": 1200,
+      "height": 348
+    }
+  },
+  {
+    "slug": "gazin-log",
+    "name": "Gazin Log",
+    "source": "Gazin Log 02.png",
+    "width": 647,
+    "height": 202,
+    "bytes": 22624,
+    "transparent": true,
+    "preview": {
+      "width": 647,
+      "height": 202
+    }
+  },
+  {
+    "slug": "gazin-seguros",
+    "name": "Gazin Seguros",
+    "source": "Gazin Seguros.png",
+    "width": 3533,
+    "height": 1025,
+    "bytes": 134395,
+    "transparent": true,
+    "preview": {
+      "width": 1200,
+      "height": 348
+    }
+  },
+  {
+    "slug": "gazin-tech",
+    "name": "Gazin Tech",
+    "source": "GazinTech.png",
+    "width": 7772,
+    "height": 1034,
+    "bytes": 190165,
+    "transparent": true,
+    "preview": {
+      "width": 1200,
+      "height": 160
+    }
+  },
+  {
+    "slug": "gazin-viagens",
+    "name": "Gazin Viagens",
+    "source": "Logo Gazin Viagens Avião.png",
+    "width": 3420,
+    "height": 1340,
+    "bytes": 134888,
+    "transparent": true,
+    "preview": {
+      "width": 1200,
+      "height": 470
+    }
+  },
+  {
+    "slug": "instituto-mario-gazin",
+    "name": "Instituto Mário Gazin",
+    "source": "Logo Instituto Mario Gazin com Frase.png",
+    "width": 1921,
+    "height": 1080,
+    "bytes": 90145,
+    "transparent": true,
+    "preview": {
+      "width": 853,
+      "height": 449
+    }
+  },
+  {
+    "slug": "jeito-gazin",
+    "name": "Jeito Gazin",
+    "source": "Jeito Gazin - OFICIAL.png",
+    "width": 1366,
+    "height": 768,
+    "bytes": 43358,
+    "transparent": true,
+    "preview": {
+      "width": 1103,
+      "height": 272
+    }
+  },
+  {
+    "slug": "paranatec",
+    "name": "Paranatec",
+    "source": "PARANATEC NOVA_1.png",
+    "width": 1602,
+    "height": 420,
+    "bytes": 47196,
+    "transparent": true,
+    "preview": {
+      "width": 1200,
+      "height": 315
+    }
+  },
+  {
+    "slug": "portal-colchoes",
+    "name": "Portal Colchões",
+    "source": "Portal Logo.png",
+    "width": 1000,
+    "height": 1000,
+    "bytes": 44723,
+    "transparent": true,
+    "preview": {
+      "width": 932,
+      "height": 292
+    }
+  },
+  {
+    "slug": "tv-gazin",
+    "name": "TV Gazin",
+    "source": "Nova Logo TV Gazin.png",
+    "width": 4124,
+    "height": 994,
+    "bytes": 148245,
+    "transparent": true,
+    "preview": {
+      "width": 1200,
+      "height": 289
+    }
+  }
+]

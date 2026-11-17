@@ -1,4 +1,5 @@
 import { test, expect, type Locator, type Page } from '@playwright/test'
+import { skipOpening } from './helpers'
 
 async function positionAt(page: Page, target: Locator, viewportRatio: number) {
   const top = await target.evaluate((element, ratio) =>
@@ -11,6 +12,7 @@ for (const width of [1440, 390]) {
     await page.setViewportSize({ width, height: width === 1440 ? 1000 : 844 })
     await page.emulateMedia({ reducedMotion: 'no-preference' })
     await page.goto('/')
+    await skipOpening(page)
     await expect(page.locator('html')).toHaveClass(/motion-enabled/)
 
     const visionTrigger = page.locator(width === 1440 ? '.vision .purpose-line' : '.vision .purpose-text').last()

@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test'
+import { skipOpening } from './helpers'
 import { mkdir } from 'node:fs/promises'
 
 const sizes = [1920, 1440, 768, 390, 320]
@@ -14,9 +15,10 @@ for (const width of sizes) {
     await page.goto('/')
     await expect(page.locator('.brandbook-preloader')).toHaveCount(0)
     await page.evaluate(() => document.fonts.ready)
-    await expect(page).toHaveTitle('Brandbook Gazin — Guia da Marca')
-    await expect(page.locator('h1')).toHaveText('brandbook')
-    await expect(page.locator('main > section')).toHaveCount(5)
+    await expect(page).toHaveTitle('Manual da Marca Gazin')
+    await expect(page.getByRole('heading', { name: 'DNA GAZIN', exact: true })).toBeVisible()
+    // Essência (4) + Nossa História + capítulos 01–12 (12).
+    await expect(page.locator('main > section')).toHaveCount(18)
     await expect(page.locator('.pillar')).toHaveCount(4)
     await expect(page.locator('#valores li')).toHaveCount(5)
     await expect(page.locator('.pillars-note')).toContainText('Sujeitos à validação institucional.')
@@ -53,3 +55,28 @@ test('Movimento reduzido e link direto preservam a leitura', async ({ page }) =>
   await expect(page.locator('.mission blockquote')).toHaveText('Estabelecer vínculos duradouros com nossos clientes, promovendo as melhores condições para a venda de produtos e serviços.')
   await expect(page.locator('.vision blockquote')).toHaveText('Ser um grupo econômico centenário, comprometido com a felicidade das pessoas.')
 })
+
+for (const reducedMotion of ['reduce', 'no-preference'] as const) {
+  test(`Menu Essência: "Nossa Missão" e "Nossa Visão" em tópicos separados (${reducedMotion})`, async ({ page }) => {
+    await page.emulateMedia({ reducedMotion })
+    await page.setViewportSize({ width: 1440, height: 900 })
+    await page.goto('/')
+    await skipOpening(page)
+    if (reducedMotion === 'no-preference') await expect(page.locator('html')).toHaveClass(/motion-enabled/)
+    const trigger = page.getByRole('button', { name: /Capítulos/ })
+    const dialog = page.getByRole('dialog', { name: 'Navegação do Manual da Marca' })
+    await trigger.click()
+    await expect(dialog.getByRole('link', { name: 'Missão e Visão' })).toHaveCount(0)
+    for (const [label, id, title] of [['Nossa Missão', 'missao', 'NOSSA MISSÃO'], ['Nossa Visão', 'visao', 'NOSSA VISÃO']]) {
+      if (!await dialog.isVisible()) await trigger.click()
+      await dialog.getByRole('link', { name: label, exact: true }).click()
+      await expect(dialog).toBeHidden()
+      await expect.poll(() => page.evaluate(() => location.hash)).toBe(`#${id}`)
+      await page.waitForTimeout(900)
+      // The block's heading is on screen, below the fixed bar.
+      const heading = page.locator(`#${id}`).getByText(new RegExp(title, 'i')).first()
+      await expect(heading).toBeInViewport()
+      await expect(page.locator('.nav-current')).toContainText(label)
+    }
+  })
+}

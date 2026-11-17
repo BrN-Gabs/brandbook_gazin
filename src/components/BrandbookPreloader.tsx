@@ -112,7 +112,7 @@ export function BrandbookPreloader({ reduced, onComplete }: { reduced: boolean; 
 
     const reveal = () => {
       setStage('complete')
-      status.textContent = 'Brandbook pronto.'
+      status.textContent = 'Manual da Marca pronto.'
       if (reducedRef.current) { quickExit(); return }
       const slowLoad = performance.now() - started > 1800
       // The same two words travel from the storyboard into the permanent title.
@@ -197,16 +197,16 @@ export function BrandbookPreloader({ reduced, onComplete }: { reduced: boolean; 
     }
   }, [])
 
-  return <div ref={root} className="brandbook-preloader" data-stage="loading" role="dialog" aria-modal="true" aria-label="Abertura do Brandbook Gazin" tabIndex={-1}>
+  return <div ref={root} className="brandbook-preloader" data-stage="loading" role="dialog" aria-modal="true" aria-label="Abertura do Manual da Marca Gazin" tabIndex={-1}>
     <div className="preloader-backdrop" />
     <div className="preloader-word preloader-brand" aria-hidden="true">brand</div>
     <div className="preloader-word preloader-book" aria-hidden="true">book</div>
-    <div className="preloader-center" role="progressbar" aria-label="Preparando o Brandbook" aria-valuemin={0} aria-valuemax={100} aria-valuenow={0}>
+    <div className="preloader-center" role="progressbar" aria-label="Preparando o Manual da Marca" aria-valuemin={0} aria-valuemax={100} aria-valuenow={0}>
       <LoadingOutline />
       <span className="loading-percentage" aria-hidden="true">0%</span>
       <img className="preloader-logo" src={`${import.meta.env.BASE_URL}${brandContent.meta.logoSrc}`} width="2974" height="835" alt="" fetchPriority="high" />
     </div>
-    <span className="sr-only" role="status">Preparando o Brandbook Gazin.</span>
+    <span className="sr-only" role="status">Preparando o Manual da Marca Gazin.</span>
     <button className="preloader-skip" onClick={() => skip.current()}>Pular abertura</button>
   </div>
 }

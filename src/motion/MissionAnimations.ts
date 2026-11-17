@@ -4,7 +4,7 @@ export function missionAnimations({ desktop, tall, gentle }: MotionOptions) {
   const mission = document.querySelector<HTMLElement>('.mission')!
   reveal(mission.querySelector('.section-pill'), mission, 0, desktop ? 22 : motionConfig.mobileDistance)
   const canPin = desktop && tall && !gentle && mission.offsetHeight < innerHeight - 32
-  gsap.fromTo(mission.querySelectorAll('.mission-word'), { opacity: 0.2 }, {
+  gsap.fromTo(mission.querySelectorAll('.mission-word'), { opacity: 0.5 }, {
     opacity: 1, stagger: 0.12, duration: 0.35, ease: 'none',
     scrollTrigger: {
       id: 'mission-reading', trigger: mission,

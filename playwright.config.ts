@@ -5,6 +5,9 @@ export default defineConfig({
   fullyParallel: false,
   workers: 1,
   reporter: 'list',
+  // The cinematic opening runs ~7.5 s before the home settles.
+  expect: { timeout: 12000 },
+  timeout: 60000,
   use: {
     baseURL: 'http://127.0.0.1:5173',
     browserName: 'chromium',

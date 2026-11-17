@@ -1,0 +1,72 @@
+{
+  "gazin-a-z": {
+    "path": "assets/nossas-marcas/gazin-a-z.png",
+    "width": 485,
+    "height": 102,
+    "page": 7,
+    "method": "imagem embutida no PDF"
+  },
+  "gamerzone": {
+    "path": "assets/nossas-marcas/gamerzone.png",
+    "width": 1200,
+    "height": 480,
+    "page": 16,
+    "method": "arquivo oficial fornecido pela equipe"
+  },
+  "done": {
+    "path": "assets/nossas-marcas/done.png",
+    "width": 1200,
+    "height": 460,
+    "page": 28,
+    "method": "arquivo oficial fornecido pela equipe"
+  },
+  "ecoflash": {
+    "path": "assets/nossas-marcas/ecoflash.png",
+    "width": 1200,
+    "height": 376,
+    "page": 40,
+    "method": "arquivo oficial fornecido pela equipe"
+  },
+  "gold-confort": {
+    "path": "assets/nossas-marcas/gold-confort.png",
+    "width": 1014,
+    "height": 769,
+    "page": 52,
+    "method": "arquivo oficial fornecido pela equipe"
+  },
+  "sleep-on": {
+    "path": "assets/nossas-marcas/sleep-on.png",
+    "width": 979,
+    "height": 524,
+    "page": 61,
+    "method": "vetor renderizado da página"
+  },
+  "mark-blank": {
+    "path": "assets/nossas-marcas/mark-blank.png",
+    "width": 1200,
+    "height": 414,
+    "page": 68,
+    "method": "imagem embutida no PDF"
+  },
+  "grock": {
+    "path": "assets/nossas-marcas/grock.png",
+    "width": 512,
+    "height": 160,
+    "page": 73,
+    "method": "imagem embutida no PDF"
+  },
+  "fitmotion": {
+    "path": "assets/nossas-marcas/fitmotion.png",
+    "width": 1200,
+    "height": 474,
+    "page": 78,
+    "method": "imagem embutida no PDF"
+  },
+  "colorvision": {
+    "path": "assets/nossas-marcas/colorvision.png",
+    "width": 1200,
+    "height": 195,
+    "page": 85,
+    "method": "imagem embutida no PDF"
+  }
+}

@@ -3,17 +3,26 @@
 // Os pilares são uma proposta editorial pendente de aprovação institucional.
 export const brandContent = {
   meta: {
-    title: 'Brandbook Gazin — Guia da Marca',
-    description: 'Brandbook Gazin. Nossa essência, missão, visão e os pilares que orientam um jeito de fazer, conectar e transformar.',
+    title: 'Manual da Marca Gazin',
+    description: 'Manual da Marca Gazin. Nossa essência, missão, visão e os pilares que orientam um jeito de fazer, conectar e transformar.',
     logoAlt: 'Gazin',
     logoSrc: 'assets/logo-gazin.png',
     signature: 'Sempre fazendo o melhor pra você.',
-    edition: 'BRANDBOOK GAZIN',
+    edition: 'MANUAL DA MARCA',
     guide: 'GUIA DA MARCA',
+  },
+  /** Rodapé: redes oficiais (Gazin: Instagram verificado @gazin; Jeito Gazin: Douradina-PR). */
+  footer: {
+    social: [
+      { brand: 'Gazin', links: [{ network: 'Instagram', handle: '@gazin', url: 'https://www.instagram.com/gazin/' }, { network: 'Facebook', handle: 'Gazin', url: 'https://www.facebook.com/gazin' }] },
+      { brand: 'Jeito Gazin', links: [{ network: 'Instagram', handle: '@jeitogazin', url: 'https://www.instagram.com/jeitogazin/' }, { network: 'Facebook', handle: 'Jeito Gazin', url: 'https://www.facebook.com/jeitogazin' }] },
+    ],
+    phone: { label: '(44) 3663-8000', href: 'tel:+554436638000' },
+    credit: 'Desenvolvido pela equipe de Marketing Gazin',
   },
   accessibility: {
     mainNavigation: 'Navegação principal',
-    mobileNavigation: 'Navegação do Brandbook',
+    mobileNavigation: 'Navegação do Manual da Marca',
     openMenu: 'Abrir menu de navegação',
     closeMenu: 'Fechar menu de navegação',
     skipToContent: 'Pular para o conteúdo',
@@ -30,8 +39,12 @@ export const brandContent = {
       label: 'Introdução',
     },
     {
-      id: 'missao-visao',
-      label: 'Missão e Visão',
+      id: 'missao',
+      label: 'Nossa Missão',
+    },
+    {
+      id: 'visao',
+      label: 'Nossa Visão',
     },
     {
       id: 'valores',
@@ -41,10 +54,18 @@ export const brandContent = {
       id: 'pilares',
       label: 'Pilares',
     },
+    {
+      id: 'historia',
+      label: 'Nossa História',
+    },
+    {
+      id: 'arvore',
+      label: 'Árvore da Jornada',
+    },
   ],
   hero: {
     title: [
-      'Brandbook',
+      'Manual da Marca',
       'Gazin',
     ],
     description: 'Mais que uma identidade, um jeito de fazer, conectar e transformar.',
@@ -54,7 +75,7 @@ export const brandContent = {
   },
   introduction: {
     title: 'INTRODUÇÃO',
-    description: 'A marca Gazin carrega uma história construída com dedicação, confiança e compromisso com as pessoas. Este Brandbook reúne orientações para apresentar e preservar essa identidade em diferentes pontos de contato.',
+    description: 'A marca Gazin carrega uma história construída com dedicação, confiança e compromisso com as pessoas. Este Manual da Marca reúne orientações para apresentar e preservar essa identidade em diferentes pontos de contato.',
     items: [
       {
         number: '01',
@@ -64,7 +85,7 @@ export const brandContent = {
       {
         number: '02',
         title: 'Apoio',
-        text: 'Este Brandbook acompanha o dia a dia de quem cria para a Gazin. Suas recomendações e exemplos ajudam a desenvolver peças, adaptar formatos e revisar materiais. Recorra a essas referências para esclarecer dúvidas e tomar decisões com mais segurança.',
+        text: 'Este Manual da Marca acompanha o dia a dia de quem cria para a Gazin. Suas recomendações e exemplos ajudam a desenvolver peças, adaptar formatos e revisar materiais. Recorra a essas referências para esclarecer dúvidas e tomar decisões com mais segurança.',
       },
       {
         number: '03',
@@ -84,6 +105,9 @@ export const brandContent = {
         'melhores condições para a',
         'venda de produtos e serviços.',
       ],
+      // Foto da moldura ao lado da missão: caminho em /public (ex.: 'assets/proposito/missao.jpg')
+      // e descrição do que se vê. Vazio = moldura com espaço reservado.
+      photo: { src: 'assets/proposito/missao-familia.jpg', alt: 'Vendedor da Gazin, de uniforme e com um tablet, atende uma família sorridente — pai, mãe e filha — na loja' },
     },
     vision: {
       label: 'Nossa Visão',
@@ -93,8 +117,24 @@ export const brandContent = {
         'com a felicidade',
         'das pessoas.',
       ],
+      // Foto da moldura ao lado da visão (mesmas regras da missão).
+      photo: { src: 'assets/proposito/visao-colaboradora.jpg', alt: 'Colaboradora da Gazin sorrindo, de braços cruzados, com uniforme e crachá, em uma loja com televisores ao fundo' },
     },
   },
+  // Pontos do DNA Gazin revelados ao passar o mouse sobre a hélice da introdução.
+  dnaTraits: [
+    { number: '01', title: 'Ter fé' },
+    { number: '02', title: 'Sentimento de dono' },
+    { number: '03', title: 'Espírito de equipe' },
+    { number: '04', title: 'Lealdade e integridade' },
+    { number: '05', title: 'Empatia e respeito' },
+    { number: '06', title: 'Atitude e proatividade' },
+    { number: '07', title: 'Simplicidade e objetividade' },
+    { number: '08', title: 'Competitividade' },
+    { number: '09', title: 'Pontualidade' },
+    { number: '10', title: 'Comunicação' },
+    { number: '11', title: 'Flexibilidade e senso de urgência' },
+  ],
   values: {
     title: 'Nossos Valores',
     items: [

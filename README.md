@@ -37,6 +37,7 @@ O build gera `dist/`, que pode ser publicado em qualquer hospedagem estática. A
 - `src/sections/`: as cinco seções, independentes e reutilizáveis.
 - `src/components/`: header, menu mobile, footer, revelações, progresso e símbolos geométricos próprios.
 - `src/styles/globals.css`: cores, tipografia, escala fluida e ajustes responsivos.
+- `src/data/visualIdentity.ts` e `src/components/identity/`: capítulo 02 · Identidade Visual, baseado no Manual da Logomarca 2024. Consulte [Identidade Visual](docs/identidade-visual.md).
 - `src/motion/`: configuração compartilhada, gerenciamento de scroll e animações independentes das cinco seções. Consulte [Motion Design](docs/MOTION.md).
 - `public/assets/logo-gazin.png`: arquivo original, sem processamento ou alteração.
 - `tests/brandbook.spec.ts`: testes de navegação, conteúdo, responsividade, assets e teclado.
