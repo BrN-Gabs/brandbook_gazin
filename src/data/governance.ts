@@ -18,7 +18,7 @@ export const governanceIntro = {
 
 export const sourceLabels = {
   documented: 'Regra documentada',
-  proposed: 'Modelo de referência · sujeito à validação interna',
+  proposed: 'Modelo de referência',
 }
 /** "Manual da logomarca · pág. 20–21" */
 export const logoManualPage = (page: { printed: string }) => `Manual da logomarca · pág. ${page.printed}`

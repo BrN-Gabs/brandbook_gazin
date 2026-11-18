@@ -228,7 +228,7 @@ export function InternalLanguageGuide() {
   const better = version === 'preferir'
   return <div className="in-grid">
     <div className="in-demo">
-      <Segmented label="Exemplo" value={exampleId} onChange={id => { setExampleId(id); setVersion('evitar') }} options={language.examples.map(item => ({ id: item.id, label: <><small>{item.number}</small>{item.title}</> }))} />
+      <Segmented className="in-lang-segmented" label="Exemplo" value={exampleId} onChange={id => { setExampleId(id); setVersion('evitar') }} options={language.examples.map(item => ({ id: item.id, label: <><small>{item.number}</small>{item.title}</> }))} />
       <div className={`in-message ${better ? 'is-better' : 'is-worse'}`}>
         <Segmented label="Versão da mensagem" value={version} onChange={setVersion} options={[
           { id: 'evitar', label: <><Ban size={14} aria-hidden="true" />Evitar</> },

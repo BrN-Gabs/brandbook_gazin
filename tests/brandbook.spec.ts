@@ -21,7 +21,7 @@ for (const width of sizes) {
     await expect(page.locator('main > section')).toHaveCount(18)
     await expect(page.locator('.pillar')).toHaveCount(4)
     await expect(page.locator('#valores li')).toHaveCount(5)
-    await expect(page.locator('.pillars-note')).toContainText('Sujeitos à validação institucional.')
+    await expect(page.locator('.pillars-note')).toContainText('Pilares propostos a partir da missão, visão e valores da Gazin.')
     await expect(page.getByRole('region', { name: 'Missão e Visão', exact: true })).toHaveAttribute('id', 'missao-visao')
     expect(await page.locator('.brand-logo').first().evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth === 2974)).toBe(true)
     const logo = await page.locator('.brand-logo').first().boundingBox()

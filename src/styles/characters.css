@@ -85,13 +85,14 @@
 .ch-action { display: grid; gap: 14px; padding: clamp(16px, 2.4vw, 28px); border-radius: 22px; background: rgb(var(--gazin-white-rgb) / .05); }
 .ch-action-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
 .ch-action-head h4 { font: 700 22px var(--font-display); color: var(--ch-fg); }
-.ch-scene { display: grid; grid-template-columns: 240px minmax(0, 1fr); grid-template-rows: auto 1fr; gap: 14px 24px; align-items: end; padding: 24px 24px 0; border-radius: 18px; background: linear-gradient(160deg, #f5f7ff, #dce5ff); overflow: hidden; }
-.ch-scene.is-varejo { background: linear-gradient(160deg, #eef3ff, #c8d5ff); }
-.ch-scene-teo { grid-row: 1 / span 2; align-self: end; }
-.ch-bubble { position: relative; display: flex; gap: 10px; align-self: start; padding: 16px 18px; border-radius: 18px 18px 18px 4px; background: var(--gazin-blue); color: var(--gazin-white); font: 600 clamp(16px, 1.5vw, 20px)/1.4 var(--font-display); box-shadow: 0 16px 30px -18px rgb(8 14 160 / .8); }
+.ch-scene { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 24px; padding: 24px 24px 0; border-radius: 18px; background: radial-gradient(ellipse 60% 70% at 25% 60%, rgb(var(--gazin-blue-bright-rgb) / .25), transparent 70%), #000; overflow: hidden; }
+.ch-scene-teo { align-self: end; width: 100%; height: 360px; object-fit: contain; object-position: bottom; }
+/* Bubble + tip travel together as one block, centered next to Téo instead of pinned to the two ends of the stage. */
+.ch-scene-copy { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 18px; padding-bottom: 24px; }
+.ch-bubble { position: relative; display: flex; gap: 10px; padding: 16px 18px; border-radius: 18px 18px 18px 4px; background: var(--gazin-blue); color: var(--gazin-white); font: 600 clamp(16px, 1.5vw, 20px)/1.4 var(--font-display); box-shadow: 0 16px 30px -18px rgb(8 14 160 / .8); }
 .ch-bubble svg { flex-shrink: 0; margin-top: 4px; }
-.ch-scene-tip { display: grid; gap: 2px; padding-bottom: 22px; font-size: 13.5px; line-height: 1.55; color: var(--gazin-gray-dark); }
-.ch-scene-tip b { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--gazin-blue); }
+.ch-scene-tip { display: grid; gap: 2px; font-size: 13.5px; line-height: 1.55; color: var(--gazin-blue-light); }
+.ch-scene-tip b { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--gazin-white); }
 
 /* 03 · GI.A */
 .ch-gia { display: grid; gap: clamp(24px, 3vw, 40px); }
@@ -184,11 +185,6 @@ html:not(.motion-enabled) .ch-duo > button, html:not(.motion-enabled) .ch-compar
 .ch-pose-list button[aria-checked='true'] { border-color: var(--gazin-blue-bright); color: var(--ch-fg); }
 .ch-pose-list img { display: block; width: 100%; height: 120px; object-fit: contain; }
 .ch-apps.is-compact { grid-template-columns: minmax(0, 1fr); gap: 8px; }
-/* Téo em ação: black stage, the pose matches the context. */
-.ch-scene, .ch-scene.is-varejo { background: radial-gradient(ellipse 60% 70% at 25% 60%, rgb(var(--gazin-blue-bright-rgb) / .25), transparent 70%), #000; }
-.ch-scene-teo { width: 100%; height: 360px; object-fit: contain; object-position: bottom; }
-.ch-scene-tip { color: var(--gazin-blue-light); }
-.ch-scene-tip b { color: var(--gazin-white); }
 .ch-asset-preview.is-black { background: #000; }
 .ch-asset-preview.is-clear { background: repeating-conic-gradient(#E6E9F5 0 25%, #FFFFFF 0 50%) 0 0 / 18px 18px; }
 .ch-asset-preview.is-ui { background: #1e1f24; }

@@ -113,8 +113,10 @@ function TeoShowcase() {
       <div className="ch-action-head"><h4>Téo em ação</h4><Segmented label="Contexto" value={sceneId} onChange={setSceneId} options={teo.scenes.map(item => ({ id: item.id, label: item.label }))} /></div>
       <div className={`ch-scene is-${scene.id}`} key={scene.id}>
         {(() => { const image = characterFiles.teo.find(item => item.id === scene.pose)!.preview; return <img className="ch-scene-teo" src={`${base}${image.path}`} width={image.width} height={image.height} alt={`Téo: ${scene.label.toLowerCase()}`} decoding="async" draggable={false} /> })()}
-        <p className="ch-bubble"><MessageCircle size={16} aria-hidden="true" />{scene.message}</p>
-        <p className="ch-scene-tip"><b>Aplicação recomendada</b>{scene.tip}</p>
+        <div className="ch-scene-copy">
+          <p className="ch-bubble"><MessageCircle size={16} aria-hidden="true" />{scene.message}</p>
+          <p className="ch-scene-tip"><b>Aplicação recomendada</b>{scene.tip}</p>
+        </div>
       </div>
       <p className="ch-demo-label">{teo.sceneNote}</p>
     </div>

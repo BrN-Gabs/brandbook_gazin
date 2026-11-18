@@ -121,7 +121,7 @@ export const tradeFairs = {
     fair(6, 'yes-goias', 'YES GOIÁS', 'Goiânia', 'GO', '04-13', '04-15', { name: 'YES GOIAS', city: 'GOIANIA', uf: 'GO', period: '13 ABR a 15 ABR' }),
     fair(7, 'expomovel-ceara', 'EXPOMÓVEL CEARÁ', 'Fortaleza', 'CE', '05-05', '05-07', { name: 'EXPOMOVEL CEARÁ', city: 'FORTALEZA', uf: 'CE', period: '05 MAI a 07 MAI' }),
     fair(8, 'yes-minas-gerais', 'YES MINAS GERAIS', 'Belo Horizonte', 'MG', '05-11', '05-13', { name: 'YES MINAS GERAIS', city: 'BELO HORIZONTE', uf: 'MG', period: '11 MAI a 13 MAI' }),
-    fair(9, 'movinter', 'MOVINTER', 'São José do Rio Claro', 'SP', '06-15', '06-17', { name: 'MOVINTER', city: 'SÃO JOSÉ DO RIO CLARO', uf: 'SP', period: '15 JUN a 17 JUN' }, { confirmation: 'a-conferir', warning: 'Cidade e UF a conferir: a planilha registra “São José do Rio Claro” com UF “SP”. Não usar em mapas antes da revisão.' }),
+    fair(9, 'movinter', 'MOVINTER', 'São José do Rio Claro', 'SP', '06-15', '06-17', { name: 'MOVINTER', city: 'SÃO JOSÉ DO RIO CLARO', uf: 'SP', period: '15 JUN a 17 JUN' }),
     fair(10, 'expomovel-pernambuco', 'EXPOMÓVEL PERNAMBUCO', 'Caruaru', 'PE', '08-12', '08-14', { name: 'EXPOMOVEL PERNAMBUCO', city: 'CARUARU', uf: 'PE', period: '12 AGO a 14 AGO' }),
     fair(11, 'vex-2027', 'VAREJO EXPERIENCE BRASIL', 'Foz do Iguaçu', 'PR', '08-18', '08-20', { name: 'VAREJO EXPERIENCE BRASIL', city: 'FOZ DO IGUAÇU', uf: 'PR', period: '18 AGO a 20 AGO' }, { link: 'https://varejoexperience.com.br/' }),
     fair(12, 'equipotel', 'EQUIPOTEL', 'São Paulo', 'SP', '09-14', '09-17', { name: 'EQUIPOTEL', city: 'SÃO PAULO', uf: 'SP', period: '14 SET a 17 SET' }),

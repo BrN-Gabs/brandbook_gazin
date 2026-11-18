@@ -72,7 +72,7 @@ export function PhotoVideoBody({ chapter }: { chapter: Chapter }) {
             <p id="pv-stage-title" className="pv-stage-title">{subsection.title}</p>
             <p className="pv-stage-text">{data.text}</p>
           </div>
-          <p className="pv-proposal">Proposta editorial · sujeita à validação</p>
+          <p className="pv-proposal">Proposta editorial</p>
         </header>
         <div className="pv-stage-body" key={subsection.id}><Demo /></div>
       </div>

@@ -147,7 +147,7 @@ export const brandContent = {
   },
   pillars: {
     title: 'PILARES DA MARCA',
-    note: 'Pilares propostos a partir da missão, visão e valores da Gazin. Sujeitos à validação institucional.',
+    note: 'Pilares propostos a partir da missão, visão e valores da Gazin.',
     items: [
       {
         number: '01',

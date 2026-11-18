@@ -118,7 +118,7 @@ export const brandChapters: Chapter[] = [
     ] }),
   // Nossas Marcas (portfólio de 10 marcas, logos extraídas do PDF), logo após a Arquitetura de
   // Marcas (02.10): renderizado por src/components/brands/ (dados em src/data/ourBrands.ts).
-  chapter({ id: 'nossas-marcas', title: 'Nossas Marcas', layout: 'our-brands', theme: 'night', status: 'draft',
+  chapter({ id: 'nossas-marcas', title: 'Nossas Marcas', layout: 'our-brands', theme: 'light', status: 'draft',
     leadTitle: ourBrandsIntro.title, description: [ourBrandsIntro.text],
     subsections: [
     ['Galeria de Marcas', ['brand', 'gallery']],
@@ -192,7 +192,7 @@ export const brandChapters: Chapter[] = [
   ] }),
   // Proposta editorial com demonstrações didáticas (cards na faixa horizontal + painel de detalhes):
   // renderizado por src/components/internal/ (textos em src/data/internalCommunication.ts).
-  chapter({ id: 'comunicacao-interna', title: 'Comunicação Interna', layout: 'internal', theme: 'night', status: 'draft',
+  chapter({ id: 'comunicacao-interna', title: 'Comunicação Interna', layout: 'internal', theme: 'light', status: 'draft',
     leadTitle: internalIntro.title, description: [internalIntro.text],
     subsections: [
     ['TV Gazin', ['video', 'text']],
@@ -213,7 +213,7 @@ export const brandChapters: Chapter[] = [
   ] }),
   // Regras documentadas + modelos de referência (validação pendente): renderizado por
   // src/components/governance/ (textos em src/data/governance.ts).
-  chapter({ id: 'governanca', title: 'Governança da Marca', layout: 'governance', theme: 'deep', status: 'draft',
+  chapter({ id: 'governanca', title: 'Governança da Marca', layout: 'governance', theme: 'light', status: 'draft',
     leadTitle: governanceIntro.title, description: [governanceIntro.text],
     subsections: [
     ['Responsabilidades e Gestão da Marca', ['text', 'document']],

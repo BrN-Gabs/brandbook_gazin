@@ -3,9 +3,9 @@
    pretos), com tamanho óptico pela proporção. As logos nunca recebem filtro, sombra, rotação
    ou deformação: o movimento acontece nas placas. Prefixo ob-. */
 
-.layout-our-brands { --ob-line: rgb(var(--gazin-white-rgb) / .14); display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(28px, 4vw, 56px); }
+.layout-our-brands { --ob-line: var(--ch-line); display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(28px, 4vw, 56px); }
 .layout-our-brands > * { min-width: 0; }
-.layout-our-brands :focus-visible { outline: 2px solid var(--gazin-white); outline-offset: 3px; }
+.layout-our-brands :focus-visible { outline: 2px solid var(--gazin-blue-bright); outline-offset: 3px; }
 .ob-concept { font: 800 clamp(26px, 3.4vw, 50px)/1.05 var(--font-display); letter-spacing: -.04em; color: var(--ch-fg); max-width: 22ch; }
 .ob-section { gap: clamp(22px, 2.6vw, 34px); padding: clamp(22px, 3vw, 44px); border-radius: 26px; background: radial-gradient(ellipse 50% 60% at 90% 0%, rgb(var(--gazin-blue-bright-rgb) / .14), transparent 70%), var(--ch-card); }
 .ob-section:hover { translate: none; }
@@ -20,11 +20,11 @@
 /* Gallery */
 .ob-gallery { --ob-h: 96px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; margin: 0; padding: 0; list-style: none; }
 .ob-gallery button { display: grid; gap: 12px; width: 100%; height: 100%; padding: 0; border: 0; background: none; color: inherit; text-align: left; cursor: pointer; }
-.ob-plate { display: grid; place-items: center; aspect-ratio: 4 / 3; padding: 16% 12%; border-radius: 18px; background: var(--gazin-white); box-shadow: 0 0 0 1px rgb(var(--gazin-white-rgb) / .2); transition: translate .35s cubic-bezier(.2, .8, .2, 1), box-shadow .35s; }
+.ob-plate { display: grid; place-items: center; aspect-ratio: 4 / 3; padding: 16% 12%; border-radius: 18px; background: var(--gazin-white); box-shadow: 0 0 0 1px var(--ch-line); transition: translate .35s cubic-bezier(.2, .8, .2, 1), box-shadow .35s; }
 .ob-caption { display: grid; gap: 2px; padding-inline: 4px; transition: opacity .3s, translate .3s; }
 .ob-caption b { font: 700 15px var(--font-display); color: var(--ch-fg); }
 .ob-caption small { font-size: 12px; color: var(--ch-muted); }
-.ob-gallery button:hover .ob-plate, .ob-gallery button:focus-visible .ob-plate { translate: 0 -4px; box-shadow: 0 0 0 1px rgb(var(--gazin-white-rgb) / .4), 0 22px 40px -22px var(--glow-primary); }
+.ob-gallery button:hover .ob-plate, .ob-gallery button:focus-visible .ob-plate { translate: 0 -4px; box-shadow: 0 0 0 1px var(--ch-line), 0 22px 40px -22px var(--glow-primary); }
 .ob-gallery button[aria-pressed='true'] .ob-plate { box-shadow: 0 0 0 3px var(--gazin-blue-bright), 0 22px 40px -22px var(--gazin-blue-bright); }
 /* Desktop pointer: name and segment appear on hover/focus (always visible on touch). */
 @media (hover: hover) and (pointer: fine) {
@@ -44,15 +44,15 @@
 .ob-info h4 { font: 800 clamp(30px, 3vw, 44px)/1.05 var(--font-display); letter-spacing: -.04em; color: var(--ch-fg); }
 .ob-description { min-height: 5.1em; font-size: 15px; line-height: 1.7; color: var(--ch-muted); }
 .ob-nav { display: flex; gap: 10px; margin-top: 8px; }
-.ob-nav button { display: grid; place-items: center; width: 46px; height: 46px; border: 1px solid var(--ob-line); border-radius: 50%; background: none; color: var(--ch-fg); cursor: pointer; transition: background .25s, border-color .25s; }
-.ob-nav button:hover { background: var(--gazin-white); border-color: var(--gazin-white); color: var(--gazin-blue); }
+.ob-nav button { display: grid; place-items: center; width: 46px; height: 46px; border: 1px solid var(--ob-line); border-radius: 50%; background: none; color: var(--ch-fg); cursor: pointer; transition: background .25s, border-color .25s, color .25s; }
+.ob-nav button:hover { background: var(--gazin-blue); border-color: var(--gazin-blue); color: var(--gazin-white); }
 .motion-enabled .ob-stage .ob-logo { animation: ob-swap .5s cubic-bezier(.2, .8, .2, 1) both; }
 .motion-enabled .ob-info > *:not(.ob-nav) { animation: ob-in .45s ease both; }
 @keyframes ob-swap { from { opacity: 0; scale: .96; filter: blur(3px); } }
 .ob-dots { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px; margin: 0; padding: 0; list-style: none; }
 .ob-dots button { display: grid; place-items: center; width: 28px; height: 28px; padding: 0; border: 0; background: none; cursor: pointer; }
-.ob-dots span { width: 8px; height: 8px; border-radius: 50%; background: rgb(var(--gazin-white-rgb) / .3); transition: width .3s, background .3s; }
-.ob-dots button[aria-current='true'] span { width: 22px; border-radius: 99px; background: var(--gazin-white); }
+.ob-dots span { width: 8px; height: 8px; border-radius: 50%; background: color-mix(in srgb, var(--ch-fg) 30%, transparent); transition: width .3s, background .3s; }
+.ob-dots button[aria-current='true'] span { width: 22px; border-radius: 99px; background: var(--ch-fg); }
 
 @media (max-width: 1100px) {
   .ob-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }

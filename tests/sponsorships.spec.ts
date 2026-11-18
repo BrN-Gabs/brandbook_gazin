@@ -32,8 +32,8 @@ test('dados: quatro subtópicos, 13 feiras da planilha, sem mistura 2026 × 2027
   expect(fairs.find(item => item.id === 'femur')!.original).toEqual({ name: 'FEMUR', city: 'UBÁ - MG', uf: 'MG', period: '25 JAN a 28 JAN' })
   expect(fairs.find(item => item.id === 'vex-2027')).toMatchObject({ start: '2027-08-18', end: '2027-08-20', city: 'Foz do Iguaçu', uf: 'PR' })
   const movinter = fairs.find(item => item.id === 'movinter')!
-  expect(movinter.confirmation).toBe('a-conferir')
-  expect(movinter.warning).toMatch(/a conferir/i)
+  expect(movinter.confirmation).toBe('planejado')
+  expect(movinter.warning).toBeUndefined()
   // Fields for official material stay empty (no fictitious data).
   expect(fairs.some(item => item.booth || item.pavilion || item.address || item.photo || item.logo)).toBe(false)
   // 2026 (held) and 2027 (planned) are kept apart.
@@ -126,7 +126,7 @@ test.describe('Desktop', () => {
     expect(errors).toEqual([])
   })
 
-  test('09.4 feiras: linha do tempo, filtros, lista, alerta MOVINTER e download original', async ({ page, request }) => {
+  test('09.4 feiras: linha do tempo, filtros, lista e download original', async ({ page, request }) => {
     await open(page, 4)
     const s = section(page, 4)
     const cards = s.locator('.sp-fair-list > li')
@@ -152,7 +152,7 @@ test.describe('Desktop', () => {
     await s.getByRole('combobox', { name: 'Mês' }).selectOption('6')
     await expect(cards).toHaveCount(1)
     await expect(cards.first()).toContainText('MOVINTER')
-    await expect(cards.first().locator('.sp-fair-warning')).toContainText('a conferir')
+    await expect(cards.first().locator('.sp-fair-warning')).toHaveCount(0)
     // Download = the original spreadsheet, byte for byte.
     const link = s.getByRole('link', { name: /Baixar calendário de feiras/ })
     await expect(link).toHaveAttribute('download', tradeFairs.download.fileName)
